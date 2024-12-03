@@ -1,0 +1,24 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    /* border: red;
+    border-style: solid; */
+}
+
+:root {
+    --primary-color: #E88307;
+    --secondary-color : #D9D9D9;
+    --light-grey: #424242;
+    --medium-grey : #252525;
+    --dark-grey: #0C0C0C;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    font-family: "Roboto mono";
+}
+p {
+    font-family: "Montserrat";
+}
