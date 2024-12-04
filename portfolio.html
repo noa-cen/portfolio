@@ -6,13 +6,52 @@
         <meta name="author" content="Noa Cengarle">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="portfolio.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" 
+        rel="stylesheet">
         
         <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
         <title>Noa Cengarle - portfolio</title>
-        
     </head>
     
     <body>
-        
+        <header>
+            <img src="./Images/NC.png" alt="logo de N.C" class="nc">
+            <nav class="navbar">
+                <ul class="nav-link">
+                    <li><a href="#profil">Mon profil</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#parcours">Mon parcours</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="menu">
+                    <input type="checkbox" id="menu-hamburger">
+                    <label for="menu-hamburger"></label>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="presentation">
+                <article class="texte">
+                    <h1>Hello, <br>I am <span class="nom">Noa Cengarle</span></h1>
+                    <h2>Full stack web developer</h2>
+                </article>
+                <img src="./Images/guanaco.jpg" alt="photo en noir et blanc d'un guanaco"
+                class="guanaco">
+            </section>
+        </main>
     </body>
+
+    <script>
+        const menuHamburger = document.querySelector("#menu-hamburger")
+        const navLinks = document.querySelector(".nav-link")
+
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+
 </html>

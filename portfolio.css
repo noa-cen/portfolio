@@ -16,9 +16,212 @@
     --dark-grey: #0C0C0C;
 }
 
-:is(h1, h2, h3, h4, h5, h6) {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto mono";
 }
 p {
     font-family: "Montserrat";
+}
+
+/* Nav bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--medium-grey);
+
+    .nc {
+        height: 7vh;
+        padding-left: 30px;
+        }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        height: 9vh;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        .nav-link {
+            display: flex;
+            font-variant: small-caps;
+            font-size: 16pt;
+
+            li a {
+                display: inline-block;
+                position: relative;
+                font-family: "Roboto Mono";
+                font-weight: bold;
+                color: var(--secondary-color);
+                padding: 30px;
+            }
+        }
+        
+        .menu {
+            display: none;
+            padding: 20px 100% 15px 30px;
+            /* background-color: var(--medium-grey); */
+        }
+        label {
+            width: 30px;
+            height: 4px;
+            background-color: var(--primary-color);
+            position: absolute;
+            top: 4vh;
+            right: 5vw;
+            cursor: pointer;
+            border-radius: 16px;
+
+            &::before, &::after {
+                content: " ";
+                width: 30px;
+                height: 4px;
+                background-color: var(--primary-color);
+                position: absolute;
+                display: block;
+                border-radius: 16px;
+                transition: all 0.7s ease;
+            }
+
+            &::before {
+                bottom: 9px;
+                left: 0;
+                transform-origin: left top;
+            }
+
+            &::after {
+                top: 9px;
+                left: 0;
+                transform-origin: left bottom;
+            }
+        }
+        #menu-hamburger:checked ~label::before {
+            transform: rotateZ(40deg);
+        }
+        #menu-hamburger:checked ~label::after {
+            transform: rotateZ(-40deg);
+        }
+        #menu-hamburger:checked ~label {
+            background-color: var(--medium-grey);
+        }
+        #menu-hamburger ~label {
+            transition: all 0.6s ease;
+        }
+        #menu-hamburger {
+            display: none;
+        }
+    }
+}
+/* Fin nav bar */
+
+/* Mon profil */
+body {
+    min-height: 100vh;
+    background: var(--medium-grey);
+    background: linear-gradient(var(--medium-grey) 70%, var(--dark-grey) 100%);
+
+    main {
+        .presentation {
+            position: relative;
+        
+            .guanaco {
+                width: 100%;
+                height: 60vh;
+                object-fit: cover;
+                object-position:50% 56%;
+            }
+            .texte {
+                position: absolute;
+                top: 25px;
+                left: 50px;
+
+                h1 {
+                    font-size: 24pt;
+                }
+
+                h2 {
+                    font-size: 17pt;
+                }
+
+                :is(h1, h2) {
+                    color: var(--light-grey);
+                }
+                span.nom {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+}
+/* Fin mon profil */
+
+
+@media screen and (max-width: 992px) {
+    header {
+        .nc {
+            position: absolute;
+            top: 1vh;
+            left: 1vw;
+            }
+        .navbar {
+            width: 100vw;
+
+            .nav-link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(var(--medium-grey) 0%, var(--dark-grey) 100%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: -100%;
+                transition: all 0.5s ease;
+                z-index: 1;
+                
+                li {
+                    font-size: 1.5em;
+                }
+    
+                li a {
+                    font-weight: bolder;
+                }
+            }
+
+            .menu {
+                display: block;
+                z-index: 2;
+            }
+            
+            .nav-link.mobile-menu {
+                margin-left: 0;
+                width: 100%;
+                height: 100vh;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {    
+        main {
+            .presentation {
+                .guanaco {
+                    object-position:20% 56%;
+                }
+                .texte {
+                    left: 25px;
+                    h1 {
+                        font-size: 20pt;
+                    }
+    
+                    h2 {
+                        font-size: 14pt;
+                    }
+                }
+            }
+        }
+    }
 }
