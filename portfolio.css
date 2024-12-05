@@ -67,7 +67,6 @@ header {
         .menu {
             display: none;
             padding: 20px 100% 15px 30px;
-            /* background-color: var(--medium-grey); */
         }
         label {
             width: 30px;
@@ -123,7 +122,6 @@ header {
 
 /* Main */
 body {
-    min-height: 100vh;
     background: var(--medium-grey);
     background: linear-gradient(var(--medium-grey) 70%, var(--dark-grey) 100%);
 
@@ -243,9 +241,30 @@ body {
                     padding: 16px 0;
                 }
             }
-            .professeur, .barman {
-                h4 {
-                    padding-bottom: 16px;
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+              
+                .dropbtn {
+                    background-color: transparent;
+                    font-family: "Roboto mono";
+                    color: var(--secondary-color);
+                    font-size: 12pt;
+                    border: none;
+                    cursor: pointer;
+                }
+              
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: var(--medium-grey);
+                    min-width: 150%;
+                    overflow: auto;
+                }
+              
+                .show {
+                    display:block;
                 }
             }
         }

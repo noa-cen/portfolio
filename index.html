@@ -108,15 +108,15 @@
                     <h4>2024 - 2027 Bachelor IT à La Plateforme, Marseille</h4>
                     <div class="unit1">
                         <h5>UNIT 1 : Hardware, système & réseaux</h5>
-                            <ul>
-                                <li>Maquetter une application</li>
-                                <li>Développer une interface utilisateur de type desktop</li> 
-                                <li>Développer des composants d’accès aux données</li>
-                                <li>Développer la partie front-end d’une interface 
-                                utilisateur web (HTML, CSS, JS…)</li>
-                                <li>Développer la partie back-end d’une interface 
-                                utilisateur web (PHP, SQL)</li>
-                            </ul>
+                        <ul>
+                            <li>Maquetter une application</li>
+                            <li>Développer une interface utilisateur de type desktop</li> 
+                            <li>Développer des composants d’accès aux données</li>
+                            <li>Développer la partie front-end d’une interface 
+                            utilisateur web (HTML, CSS, JS…)</li>
+                            <li>Développer la partie back-end d’une interface 
+                            utilisateur web (PHP, SQL)</li>
+                        </ul>
                     </div>
                     <div class="unit2">
                         <h5>UNIT 2 : Programmation & algorithmie</h5>
@@ -138,8 +138,10 @@
                     </div>
                 </article>
 
-                <article class="professeur">
-                    <h4>2023 - 2024 Professeur de français FLE, Córdoba, Argentina</h4>
+                <article class="dropdown">
+                    <button id="myBtn" class="dropbtn">2023 - 2024 Professeur de français FLE, 
+                        Córdoba, Argentina</button>
+                    <div id="myDropdown" class="dropdown-content">
                         <ul>
                             <li>Enseignement du français langue étrangère à des étudiants 
                                 de tous niveaux</li>
@@ -147,10 +149,13 @@
                             <li>Animation d'ateliers culturels pour la découverte de la culture 
                                 francophone</li>
                         </ul>
+                    </div>
                 </article>
 
-                <article class="barman">
-                    <h4>2023 Barman en chef chez NFS, Melbourne, Australia</h4>
+                <article class="dropdown">
+                    <button id="myBtn" class="dropbtn">2023 Barman en chef chez NFS, 
+                        Melbourne, Australia</button>
+                    <div id="myDropdown" class="dropdown-content">
                         <ul>
                             <li>Accueil et service client</li>
                             <li>Gestion des réclamations et garantie de la satisfaction client</li> 
@@ -159,6 +164,7 @@
                             <li>Organisation des plannings</li>
                             <li>Garantie du strict respect des normes d'hygiène et de sécurité</li>
                         </ul>
+                    </div>
                 </article>
             </section>
 
@@ -175,8 +181,16 @@
         const navLinks = document.querySelector(".nav-link")
 
         menuHamburger.addEventListener('click',()=>{
-        navLinks.classList.toggle('mobile-menu')
-        })
+        navLinks.classList.toggle('mobile-menu')})
+    </script>
+
+    <script>
+    // Get the button, and when the user clicks on it, execute myFunction
+    document.getElementById("myBtn").onclick = function() {myFunction()};
+    
+    /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");}
     </script>
 
 </html>
