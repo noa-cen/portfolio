@@ -18,9 +18,11 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto mono";
+    color: var(--secondary-color);
 }
-p {
+p, ul li {
     font-family: "Montserrat";
+    color: var(--secondary-color);
 }
 
 /* Nav bar */
@@ -153,6 +155,74 @@ body {
                 }
             }
         }
+
+        .aboutme {
+            padding: 40px 48px;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+            justify-content: space-evenly;
+
+            .memoji {
+                width: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: 50% 40%;
+                box-shadow: 0 3px 0 var(--primary-color);
+            }
+            .texte {
+                width: 60%;
+
+                h3 {
+                    padding-bottom: 8px;
+                    font-size: 15pt;
+                }
+                p {
+                    padding: 8px 0;
+                    text-align: justify;
+                }
+            }
+        }
+
+        .skills {
+            padding: 0 48px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            h3 {
+                padding: 16px 0;
+                font-size: 15pt;
+            }
+
+            .hard {
+                display: flex;
+                flex-direction: column;
+                
+                .images {
+                    display: flex;
+                    gap: 20px;                    
+                    img {
+                        width: 50px;
+                    }
+                }
+            }
+
+            .soft {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                ul li {
+                    list-style-position: inside;
+                    list-style-type: circle;
+                }
+            }
+
+            .languages {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
 }
 /* Fin mon profil */
@@ -199,6 +269,28 @@ body {
                 margin-left: 0;
                 width: 100%;
                 height: 100vh;
+            }
+        }
+    }
+    body {
+        main {
+            .aboutme {
+                flex-direction: column;
+                align-items: center;
+
+                .texte {
+                    padding-top: 24px;
+                    width: 100%;
+                }
+            }
+            .skills {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .hard, .soft, .languages {
+                    align-items: center;
+                }
             }
         }
     }
