@@ -31,6 +31,9 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--medium-grey);
+    position: sticky;
+    top: 0;
+    z-index: 1;
 
     .nc {
         height: 7vh;
@@ -118,7 +121,7 @@ header {
 }
 /* Fin nav bar */
 
-/* Mon profil */
+/* Main */
 body {
     min-height: 100vh;
     background: var(--medium-grey);
@@ -156,8 +159,15 @@ body {
             }
         }
 
+        .aboutme, .skills {
+            h3 {
+                padding-bottom: 32px;
+                font-size: 15pt;
+            }
+        }
+        
         .aboutme {
-            padding: 40px 48px;
+            padding: 48px;
             display: flex;
             flex-direction: row-reverse;
             align-items: flex-start;
@@ -171,12 +181,8 @@ body {
                 box-shadow: 0 3px 0 var(--primary-color);
             }
             .texte {
-                width: 60%;
+                width: 65%;
 
-                h3 {
-                    padding-bottom: 8px;
-                    font-size: 15pt;
-                }
                 p {
                     padding: 8px 0;
                     text-align: justify;
@@ -188,12 +194,7 @@ body {
             padding: 0 48px;
             display: flex;
             align-items: flex-start;
-            justify-content: space-between;
-
-            h3 {
-                padding: 16px 0;
-                font-size: 15pt;
-            }
+            justify-content: space-around;
 
             .hard {
                 display: flex;
@@ -223,11 +224,36 @@ body {
                 flex-direction: column;
             }
         }
+
+        .career {
+            padding: 48px 48px 0 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            article {
+                padding: 16px 0;
+            }
+
+            .plateforme {
+                display: flex;
+                flex-direction: column;
+                
+                h5 {
+                    padding: 16px 0;
+                }
+            }
+            .professeur, .barman {
+                h4 {
+                    padding-bottom: 16px;
+                }
+            }
+        }
     }
 }
-/* Fin mon profil */
+/* Fin main */
 
-
+/* Media queries */
 @media screen and (max-width: 992px) {
     header {
         .nc {
@@ -291,6 +317,11 @@ body {
                 .hard, .soft, .languages {
                     align-items: center;
                 }
+                .soft, .languages {
+                    h3 {
+                        padding: 32px 0;
+                    }
+                }
             }
         }
     }
@@ -317,3 +348,4 @@ body {
         }
     }
 }
+/* Fin media queries */
