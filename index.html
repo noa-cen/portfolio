@@ -21,10 +21,10 @@
                 alt="logo de N.C" class="nc"></a>
             <nav class="navbar">
                 <ul class="nav-link">
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#career">Career history</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#skills"  class="linkBurger">Skills</a></li>
+                    <li><a href="#career"  class="linkBurger">Career history</a></li>
+                    <li><a href="#portfolio" class="linkBurger">Portfolio</a></li>
+                    <li><a href="#contact" class="linkBurger">Contact</a></li>
                 </ul>
                 <div class="menu">
                     <input type="checkbox" id="menu-hamburger">
@@ -72,8 +72,6 @@
                         <img src="./Images/Logos/html5-original.png" alt="logo HTML5">
                         <img src="./Images/Logos/css3-original.png" alt="logo CSS3">
                         <img src="./Images/Logos/figma-original.png" alt="logo Figma">
-                    </div>
-                    <div class="images">
                         <img src="./Images/Logos/github-original.png" alt="logo GitHub">
                         <img src="./Images/Logos/swift-original.png" alt="logo Swift">
                         <img src="./Images/Logos/python-original.png" alt="logo Python">
@@ -101,77 +99,36 @@
                 </article>
             </section>
 
-            <!-- <section class="career" id="career">
-                <h3>Career history</h3>
-
-                <article class="plateforme">
-                    <h4>2024 - 2027 Bachelor IT à La Plateforme, Marseille</h4>
-                    <div class="unit1">
-                        <h5>UNIT 1 : Hardware, système & réseaux</h5>
-                        <ul>
-                            <li>Maquetter une application</li>
-                            <li>Développer une interface utilisateur de type desktop</li> 
-                            <li>Développer des composants d’accès aux données</li>
-                            <li>Développer la partie front-end d’une interface 
-                            utilisateur web (HTML, CSS, JS…)</li>
-                            <li>Développer la partie back-end d’une interface 
-                            utilisateur web (PHP, SQL)</li>
-                        </ul>
-                    </div>
-                    <div class="unit2">
-                        <h5>UNIT 2 : Programmation & algorithmie</h5>
-                        <ul>
-                            <li>Electronique, IoT</li>
-                            <li>Installation de systèmes d’exploitation</li>
-                            <li>Virtualisation</li>
-                            <li>Apprendre à utiliser Linux, Shell, Scripting</li>
-                            <li>Apprendre des notions de développement et d’algorithmie</li>
-                        </ul>
-                    </div>
-                    <div class="unit3">
-                        <h5>UNIT 3 : Ouverture sur les spécialités du numérique</h5>
-                        <ul>
-                            <li>Création de montages vidéos, comprendre les fondamentaux 
-                            des techniques audionumériques</li>
-                            <li>Découverte des métiers du design et du graphisme numérique</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="dropdown">
-                    <button id="myBtn" class="dropbtn">2023 - 2024 Professeur de français FLE, 
-                        Córdoba, Argentina</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <ul>
-                            <li>Enseignement du français langue étrangère à des étudiants 
-                                de tous niveaux</li>
-                            <li>Conception et mise en place de programmes pédagogiques innovants</li> 
-                            <li>Animation d'ateliers culturels pour la découverte de la culture 
-                                francophone</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="dropdown">
-                    <button id="myBtn" class="dropbtn">2023 Barman en chef chez NFS, 
-                        Melbourne, Australia</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <ul>
-                            <li>Accueil et service client</li>
-                            <li>Gestion des réclamations et garantie de la satisfaction client</li> 
-                            <li>Commande et réapprovisionnement des boissons et fournitures</li>
-                            <li>Encadrement de l'équipe</li>
-                            <li>Organisation des plannings</li>
-                            <li>Garantie du strict respect des normes d'hygiène et de sécurité</li>
-                        </ul>
-                    </div>
-                </article>
-            </section> -->
-
             <section class="portfolio" id="portfolio">
-                <article class="fansite"></article>
-                <article class="tictactoe"></article>
-                <article class="bloompetals"></article>
+                <h3>Portfolio</h3>
+                    <article class="projects">
+
+                        <a href="https://noa-cen.github.io/Fansite_limonade/" target="_blank" 
+                        class="fansite">
+                        <h4>Fansite</h4>
+                        <img src="./Images/La Scaloneta.jpg" 
+                        alt="Page d'accueil du fansite de La Scaloneta" class="scaloneta">
+                        <p>Création d'un fansite personnel (La Scaloneta) présenté dans un site 
+                            accueil (Limonade) créé en groupe</p>
+                        </a>
+
+                        <a href="https://github.com/noa-cen/PYTHON_tictactoe.git" target="_blank" 
+                        class="tictactoe">
+                            <h4>TicTacToe</h4>
+                            <img src="./Images/tictactoe.jpg" alt="Preview du TicTacToe" 
+                            class="morpion">
+                            <p>Création d'un jeu TicTacToe en Python</p>
+                        </a>
+
+                        <a href="https://noa-cen.github.io/BloomPetals/" target="_blank" 
+                        class="bloompetals">
+                            <h4>BloomPetals</h4>
+                            <img src="./Images/bloompetals.jpg" alt="Page d'accueil de BloomPetals" 
+                            class="bloom">
+                            <p>Création d'un site pour un fleuriste</p>
+                        </a>
+
+                    </article>
             </section>
         </main>
     </body>
@@ -179,9 +136,15 @@
     <script>
         const menuHamburger = document.querySelector("#menu-hamburger")
         const navLinks = document.querySelector(".nav-link")
-
-        menuHamburger.addEventListener('click',()=>{
-        navLinks.classList.toggle('mobile-menu')})
+        document.querySelectorAll(".linkBurger").forEach( element => {
+            element.addEventListener('click', ()=>{
+                document.querySelector('#menu-hamburger').checked = false
+                navLinks.classList.toggle('mobile-menu')
+            })
+        })
+        menuHamburger.addEventListener('click',() => {
+            navLinks.classList.toggle('mobile-menu')
+        })
     </script>
 
 </html>
