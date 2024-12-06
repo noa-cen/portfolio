@@ -189,7 +189,7 @@ body {
         }
 
         .skills {
-            padding: 0 48px;
+            padding: 0 48px 48px 48px;
             display: flex;
             align-items: flex-start;
             justify-content: space-around;
@@ -223,7 +223,7 @@ body {
             }
         }
 
-        .career {
+        /* .career {
             padding: 48px 48px 0 48px;
             display: flex;
             flex-direction: column;
@@ -266,7 +266,7 @@ body {
                 .show {
                     display:block;
                 }
-            }
+            } */
         }
     }
 }
