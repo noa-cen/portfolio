@@ -222,52 +222,6 @@ body {
                 flex-direction: column;
             }
         }
-
-        /* .career {
-            padding: 48px 48px 0 48px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            
-            article {
-                padding: 16px 0;
-            }
-
-            .plateforme {
-                display: flex;
-                flex-direction: column;
-                
-                h5 {
-                    padding: 16px 0;
-                }
-            }
-
-            .dropdown {
-                position: relative;
-                display: inline-block;
-              
-                .dropbtn {
-                    background-color: transparent;
-                    font-family: "Roboto mono";
-                    color: var(--secondary-color);
-                    font-size: 12pt;
-                    border: none;
-                    cursor: pointer;
-                }
-              
-                .dropdown-content {
-                    display: none;
-                    position: absolute;
-                    background-color: var(--medium-grey);
-                    min-width: 150%;
-                    overflow: auto;
-                }
-              
-                .show {
-                    display:block;
-                }
-            } 
-        }*/
     }
 }
 /* Fin main */
