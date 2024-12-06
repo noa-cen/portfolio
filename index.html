@@ -197,6 +197,67 @@
 
                     </article>
             </section>
+
+            <section class="contact" id="contact">
+                <h3>Formulaire de Contact</h3>
+                <form method="post" action="traitement.php">
+                    <fieldset id="contacter">
+                        <article>
+                            <label for="prenom">Votre Prénom :</label>
+                            <input type="text" name="prenom" id="prenom" required>
+                        </article>
+
+                        <article>
+                            <label for="nom">Votre Nom :</label>
+                            <input type="text" name="nom" id="nom" required>
+                        </article>
+
+                        <article>
+                            <label for="email">Votre Adresse e-mail :</label>
+                            <input type="email" name="email" id="email" required>
+                        </article>
+
+                        <article>
+                            <label for="telephone">Votre Numéro de Téléphone :</label>
+                            <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}">
+                        </article>
+                    </fieldset>
+                    
+                    <fieldset id="message">
+                        <article>
+                            <label for="objet">Objet :</label>
+                            <input type="text" name="objet" id="objet" required>
+                        </article>
+    
+                        <article>
+                            <label for="fichier">Joindre un fichier :</label>
+                            <input type="file" name="fichier" id="fichier" accept=".jpg,.png,.pdf,.docx">
+                        </article>
+    
+                        <article>
+                            <label for="message">Votre message :</label><br>
+                            <textarea name="message" id="message" required rows="10"></textarea>
+                        </article>
+    
+                        <!-- Champs masqués antispam : Pour détecter les robots spam : -->
+                        <input type="text" name="antispam" style="display:none;">
+    
+                    </fieldset>
+    
+                    <fieldset id="validation">
+                        <article>
+                            <label>
+                                <input type="checkbox" name="consentement" required>
+                                J'accepte que mes données soient utilisées conformément à la 
+                                <a href="politique-confidentialite.html">politique de confidentialité</a>.
+                            </label>
+                        </article>
+
+                            <button type="submit">Envoyer</button>
+                    </fieldset>
+                </form>
+            </section>
+
         </main>
     </body>
 
