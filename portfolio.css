@@ -157,15 +157,16 @@ body {
             }
         }
 
-        .aboutme, .skills {
+        .aboutme, .skills, .career, .portfolio {
+            padding: 48px;
+
             h3 {
-                padding-bottom: 32px;
+                padding-bottom: 40px;
                 font-size: 15pt;
             }
         }
         
         .aboutme {
-            padding: 48px;
             display: flex;
             flex-direction: row-reverse;
             align-items: flex-start;
@@ -185,11 +186,16 @@ body {
                     padding: 8px 0;
                     text-align: justify;
                 }
+                p:first-child {
+                    padding-top: 0;
+                }
+                p:last-child {
+                    padding-bottom: 0;
+                }
             }
         }
 
         .skills {
-            padding: 0 48px 48px 48px;
             display: flex;
             align-items: flex-start;
             justify-content: space-around;
@@ -200,7 +206,10 @@ body {
                 
                 .images {
                     display: flex;
-                    gap: 20px;                    
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 40px 20px;     
+
                     img {
                         width: 50px;
                     }
@@ -222,10 +231,41 @@ body {
                 flex-direction: column;
             }
         }
+
+        .portfolio {
+            h3 {
+                text-align: center;
+            }
+            .projects {
+                display: flex;
+                justify-content: space-around;
+
+                .fansite, .tictactoe, .bloompetals {
+                    padding: 16px;
+                    width: 300px;
+                    height: 320px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border: 2px solid var(--primary-color);
+                    border-radius: 16px;  
+
+                    p {
+                        text-align: center;
+                    }
+
+                    .scaloneta, .morpion, .bloom {
+                        width: 200px;
+                        height: 200px;
+                        padding: 16px 0;
+                    }
+                }
+            }
+        }
     }
 }
 /* Fin main */
-
 
 /* Media queries */
 @media screen and (max-width: 992px) {
@@ -295,6 +335,14 @@ body {
                     h3 {
                         padding: 32px 0;
                     }
+                }
+            }
+            .portfolio {
+                .projects {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 32px;
                 }
             }
         }
