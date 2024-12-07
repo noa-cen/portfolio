@@ -17,7 +17,7 @@
     
     <body>
         <header>
-            <a href="https://noa-cen.github.io/portfolio/"><img src="./Images/nc.png" 
+            <a href="https://noa-cen.github.io/portfolio/"><img src="./Images/Logo.jpg" 
                 alt="logo de N.C" class="nc"></a>
             <nav class="navbar">
                 <ul class="nav-link">
@@ -44,7 +44,7 @@
             </section>
 
             <section class="aboutme">
-                <img src="./Images/memoji2.png" alt="Memoji personnel" class="memoji">
+                <img src="./Images/memoji.png" alt="Memoji personnel" class="memoji">
                 <article class="texte">
                     <h3>About me</h3>
                     <p>Avec 10 ans d’expérience dans le service client et la gestion d’équipe, 
@@ -69,12 +69,12 @@
                 <article class="hard">
                     <h3>Hard skills</h3>
                     <div class="images">
-                        <img src="./Images/Logos/html5-original.png" alt="logo HTML5">
-                        <img src="./Images/Logos/css3-original.png" alt="logo CSS3">
-                        <img src="./Images/Logos/figma-original.png" alt="logo Figma">
-                        <img src="./Images/Logos/github-original.png" alt="logo GitHub">
-                        <img src="./Images/Logos/swift-original.png" alt="logo Swift">
-                        <img src="./Images/Logos/python-original.png" alt="logo Python">
+                        <img src="./Images/html5.png" alt="logo HTML5">
+                        <img src="./Images/css3.png" alt="logo CSS3">
+                        <img src="./Images/figma.png" alt="logo Figma">
+                        <img src="./Images/github.png" alt="logo GitHub">
+                        <img src="./Images/swift.png" alt="logo Swift">
+                        <img src="./Images/python.png" alt="logo Python">
                     </div>
                 </article>
 
@@ -173,7 +173,7 @@
                         <a href="https://noa-cen.github.io/Fansite_limonade/" target="_blank" 
                         class="fansite">
                         <h4>Fansite</h4>
-                        <img src="./Images/La Scaloneta.jpg" 
+                        <img src="./Images/Scaloneta.jpg" 
                         alt="Page d'accueil du fansite de La Scaloneta" class="scaloneta">
                         <p>Création d'un fansite personnel (La Scaloneta) présenté dans un site 
                             accueil (Limonade) créé en groupe</p>
@@ -199,66 +199,67 @@
             </section>
 
             <section class="contact" id="contact">
-                <h3>Formulaire de Contact</h3>
-                <form method="post" action="traitement.php">
-                    <fieldset id="contacter">
-                        <article>
-                            <label for="prenom">Votre Prénom :</label>
-                            <input type="text" name="prenom" id="prenom" required>
-                        </article>
+                <form method="post" action="traitement.php" class="form">
+                    <h3>Contact form</h3>
+                    <fieldset class="contacter" id="contacter">
+                        <div class="identite">
+                            <article class="prenom">
+                                <label for="prenom">Votre prénom :</label>
+                                <input type="text" name="prenom" id="prenom" required>
+                            </article>
 
-                        <article>
-                            <label for="nom">Votre Nom :</label>
-                            <input type="text" name="nom" id="nom" required>
-                        </article>
+                            <article class="nom">
+                                <label for="nom">Votre nom :</label>
+                                <input type="text" name="nom" id="nom" required>
+                            </article>
+                        </div>
 
-                        <article>
-                            <label for="email">Votre Adresse e-mail :</label>
-                            <input type="email" name="email" id="email" required>
-                        </article>
+                        <div class="coordonnees">
+                            <article class="email">
+                                <label for="email">Votre adresse e-mail :</label>
+                                <input type="email" name="email" id="email" required>
+                            </article>
 
-                        <article>
-                            <label for="telephone">Votre Numéro de Téléphone :</label>
-                            <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}">
-                        </article>
+                            <article class="telephone">
+                                <label for="telephone">Votre numéro de téléphone :</label>
+                                <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}">
+                            </article>
+                        </div>
                     </fieldset>
                     
-                    <fieldset id="message">
-                        <article>
+                    <fieldset class="message" id="message">
+                        <article class="objet">
                             <label for="objet">Objet :</label>
                             <input type="text" name="objet" id="objet" required>
                         </article>
     
-                        <article>
-                            <label for="fichier">Joindre un fichier :</label>
-                            <input type="file" name="fichier" id="fichier" accept=".jpg,.png,.pdf,.docx">
+                        <article class="votremessage">
+                            <label for="votremessage">Votre message :</label>
+                            <textarea name="votremessage" id="votremessage" 
+                            required rows="10"></textarea>
                         </article>
-    
-                        <article>
-                            <label for="message">Votre message :</label><br>
-                            <textarea name="message" id="message" required rows="10"></textarea>
-                        </article>
-    
-                        <!-- Champs masqués antispam : Pour détecter les robots spam : -->
-                        <input type="text" name="antispam" style="display:none;">
-    
                     </fieldset>
     
-                    <fieldset id="validation">
-                        <article>
+                    <fieldset class="validation" id="validation">
+                        <!-- <article>
                             <label>
                                 <input type="checkbox" name="consentement" required>
                                 J'accepte que mes données soient utilisées conformément à la 
                                 <a href="politique-confidentialite.html">politique de confidentialité</a>.
                             </label>
-                        </article>
+                        </article> -->
 
+                        <article class="bouton">
                             <button type="submit">Envoyer</button>
+                        </article>
                     </fieldset>
                 </form>
             </section>
-
         </main>
+
+        <footer>
+            
+        </footer>
     </body>
 
     <script>
