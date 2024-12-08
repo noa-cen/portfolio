@@ -429,9 +429,18 @@ body {
         }
     }
     footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 24px;
+        gap: 10px;
+
         p {
             text-align: center;
-            padding: 24px;
+        }
+        
+        img {
+            width: 50px;
         }
     }
 }
@@ -573,6 +582,9 @@ body {
                     display: none;
                 }
             }
+        }
+        footer {
+            flex-direction: column;
         }
     }
 }
