@@ -136,6 +136,7 @@ body {
                 object-fit: cover;
                 object-position:50% 56%;
             }
+            
             .texte {
                 position: absolute;
                 top: 25px;
@@ -178,7 +179,7 @@ body {
                 border-radius: 50%;
                 object-fit: cover;
                 object-position: 50% 40%;
-                box-shadow: 0 3px 0 var(--primary-color);
+                box-shadow: 0 3px 2px var(--primary-color);
             }
             .texte {
                 width: 65%;
@@ -311,6 +312,11 @@ body {
                         padding: 16px 0;
                     }
                 }
+                .fansite:hover, .tictactoe:hover, .bloompetals:hover {
+                    transform: scale(1.02);
+                    box-shadow: rgba(232, 131, 7, 0.3) 0px 19px 38px, 
+                    rgba(232, 131, 7, 0.22) 0px 15px 12px;
+                }
             }
         }
 
@@ -376,13 +382,6 @@ body {
                     }
                 }
 
-                /* .validation {
-                    label a {
-                        text-decoration: underline;
-                        color: var(--primary-color);
-                    }
-                } */
-
                 .bouton {
                     display: flex;
                     flex-direction: column;
@@ -396,25 +395,52 @@ body {
                         font-family: "Montserrat";
                         font-weight: bold;
                         color: var(--secondary-color);
-                        border: 1px solid #ff9252;
                         background-color: var(--primary-color);
-
-                        -webkit-box-shadow: 0px 6px 0px #984200;
-                        -moz-box-shadow: 0px 6px 0px #984200;
-                        box-shadow: 0px 6px 0px #984200;
-                        -webkit-transition: all 0.1s;
-                        -moz-transition: all 0.1s;
-                        transition: all 0.1s;
                     }
-                    button:active{
-                        -webkit-box-shadow: 0px 2px 0px #984200;
-                        -moz-box-shadow: 0px 2px 0px #984200;
-                        box-shadow: 0px 2px 0px #984200;
-                        position:relative;
-                        top:4px;
+                
+                    .hvr-outline-out {
+                        display: inline-block;
+                        vertical-align: middle;
+                        -webkit-transform: perspective(1px) translateZ(0);
+                        transform: perspective(1px) translateZ(0);
+                        box-shadow: 0 0 1px var(--primary-color);
+                        position: relative;
+                    }
+                    .hvr-outline-out:before {
+                        content: '';
+                        position: absolute;
+                        border: var(--primary-color) solid 2px;
+                        border-radius: 5px;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        -webkit-transition-duration: 0.3s;
+                        transition-duration: 0.3s;
+                        -webkit-transition-property: top, right, bottom, left;
+                        transition-property: top, right, bottom, left;
+                    }
+                    .hvr-outline-out:hover:before, .hvr-outline-out:focus:before, .hvr-outline-out:active:before {
+                        top: -6px;
+                        right: -6px;
+                        bottom: -6px;
+                        left: -6px;
                     }
                 }
             }
+        }
+    
+        .glow {
+            display: inline-block;
+            vertical-align: middle;
+            box-shadow: 0 0 1px rgb(232, 131, 7);
+            box-shadow: 0 0 8px rgb(232, 131, 7, 0.6);
+        }
+    }
+    footer {
+        p {
+            text-align: center;
+            padding: 24px;
         }
     }
 }
