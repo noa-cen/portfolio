@@ -63,6 +63,12 @@ header {
                 color: var(--secondary-color);
                 padding-right: 64px;
             }
+
+            .cv {
+                background-color: var(--primary-color);
+                padding: 0 8px;
+                border-radius: 6px;
+            }
         }
         
         .menu {
@@ -198,38 +204,30 @@ body {
 
         .reseaux {
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            gap: 20px;
 
-            .line {
-                border: 1px solid var(--primary-color);
-                width: 30%;
+            h3 {
+                text-align: center;
             }
-
-            img {
-                width: 50px;
-            }
-
-            img:hover {
-                transform: scale(1.2);
-            }
-
-            button {
-                padding: 8px 32px;
-                margin: 8px;
-                border-radius: 5px;
-                cursor: pointer;
-                background-color: var(--primary-color);
-
-                a {
-                    color: var(--secondary-color);
-                    font-family: "Montserrat";
-                    font-weight: bold;
+            
+            article {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                .line {
+                    border: 1px solid var(--primary-color);
+                    width: 30%;
                 }
-            }
-            button:hover {
-                transform: scale(1.1);
+
+                img {
+                    width: 70px;
+                }
+
+                img:hover {
+                    transform: scale(1.4);
+                }
             }
         }
 
