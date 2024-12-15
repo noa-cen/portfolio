@@ -19,16 +19,20 @@
         <header>
             <section class="accueil">
                 <nav class="navbar">
-                    <img src="./Images/Logo.jpg" alt="logo N" class="logo">
+                    <img src="./Images/logo.png" alt="logo N" class="logo">
                     <ul class="nav-link">
                         <li><a href="#aboutme"  class="linkBurger">A propos de moi</a></li>
                         <li><a href="#skills"  class="linkBurger">Compétences</a></li>
                         <li><a href="#portfolio" class="linkBurger">Portfolio</a></li>
                         <li><a href="#contact" class="linkBurger">Contact</a></li>
                         <li><a href="https://drive.google.com/file/d/1WtkJQ23LchnbNU6MOrvwpsDE_cb8SnoS/view?usp=drive_link" 
-                            target="_blank" class="linkBurger"><div class="cv">Mon cv</div></a></li>
-                        <li><a href="index.html" onclick="changeLanguage('en')">English</a></li>
-                        <li><a href="index.html" onclick="changeLanguage('fr')">Français</a></li>
+                            target="_blank" class="linkBurger cv">Mon cv</a></li>
+                        <!-- <li><a href="index.html" class="linkBurger" 
+                            onclick="changeLanguage('en')"><img 
+                            src="./Images/Drapeaux/GB-UKM - United Kingdom.svg" 
+                            alt="Drapeau du Royaume-Uni" class="drapeau">/</a><a href="index.html" class="linkBurger" 
+                            onclick="changeLanguage('fr')"><img src="./Images/Drapeaux/FR - France.svg" 
+                            alt="Drapea de la France" class="drapeau"></a></li> -->
                     </ul>
                     <div class="menu">
                         <input type="checkbox" id="menu-hamburger">
@@ -37,7 +41,7 @@
                 </nav>
 
                 <article class="hello">
-                    <h1>Hello, <br>I am <span class="nom">Noa Cengarle</span></h1>
+                    <h1>Hello, <br>I am <span>Noa Cengarle</span></h1>
                     <h2>Full stack web developer</h2>
                 </article>
             </section>
@@ -46,12 +50,12 @@
         <main>
             <section class="aboutme" id="aboutme">
                 <article class="presentation">
-                    <h3>About me</h3>
+                    <img src="./Images/memoji.png" alt="Memoji personnel" class="memoji">
+                    <h3>A propos de moi</h3>
                     <p>Avec 10 ans d’expérience dans le service client et la gestion d’équipe, 
                         j’ai pris la décision de réorienter ma carrière vers le développement web. 
                         Actuellement en formation à l’école La Plateforme, je me consacre pleinement 
                         à l’apprentissage.
-                        <img src="./Images/memoji.png" alt="Memoji personnel" class="memoji">
                     </p>
                     <p>Au fil de mon parcours professionnel, j’ai su développer des compétences 
                         solides en gestion du temps, en adaptation face aux imprévus, et en 
@@ -71,57 +75,155 @@
                 
                 <article class="reseaux">
                     <h3>Retrouvez-moi sur</h3>
-                    <article>
+                    <article class="links">
                         <div class="line"></div>
                         <a href="https://github.com/noa-cen" target="_blank"><img 
-                            src="./Images/github.svg" alt="logo GitHub"></a>
+                            src="./Images/github.svg" alt="logo GitHub" title="Github"></a>
                         <a href="https://www.figma.com/@noacen" target="_blank"><img 
-                            src="./Images/figma.svg" alt="logo Figma"></a>
+                            src="./Images/figma.svg" alt="logo Figma" title="Figma"></a>
                         <a href="https://www.linkedin.com/in/noa-cengarle/" target="_blank"><img 
-                        src="./Images/linkedin.svg" alt="logo Linkedin"></a>
+                        src="./Images/linkedin.svg" alt="logo Linkedin" title="Linkedin"></a>
                         <div class="line"></div>
                     </article>
                 </article>
             </section>
 
             <section class="skills" id="skills">
-                <h3>Compétences</h3>
-                <article class="competences">
-                    <article class="hard">
-                        <h4>Techniques</h4>
-                        <article class="images">
-                            <img src="./Images/html5.svg" alt="logo HTML5" title="HTML5">
-                            <img src="./Images/css3.svg" alt="logo CSS3" title="CSS3">
-                            <!-- <img src="./Images/javascript.svg" alt="logo Javascript" title="Javascript">
-                            <img src="./Images/php.svg" alt="logo PHP" title="PHP"> -->
-                            <img src="./Images/swift.svg" alt="logo Swift" title="Swift">
-                            <img src="./Images/python.svg" alt="logo Python" title="Python">
-                        </article>
+                <article class="hard">
+                    <h3>Compétences techniques</h3>
+                    <article class="images">
+                        <img src="./Images/html5.svg" alt="logo HTML5" title="HTML5">
+                        <img src="./Images/css3.svg" alt="logo CSS3" title="CSS3">
+                        <!-- <img src="./Images/javascript.svg" alt="logo Javascript" title="Javascript">
+                        <img src="./Images/php.svg" alt="logo PHP" title="PHP"> -->
+                        <img src="./Images/swift.svg" alt="logo Swift" title="Swift">
+                        <img src="./Images/python.svg" alt="logo Python" title="Python">
                     </article>
+                </article>
 
-                    <article class="soft">
-                        <h4>Comportementales</h4>
-                        <ul>
-                            <li>Autonomie</li>
-                            <li>Esprit d'équipe</li>
-                            <li>Créativité</li>
-                            <li>Adaptabilité</li>
-                            <li>Résolution de problèmes</li>
-                        </ul>
-                    </article>
+                <article class="soft">
+                    <h3>Compétences comportementales</h3>
+                    <ul>
+                        <li>Autonomie</li>
+                        <li>Esprit d'équipe</li>
+                        <li>Créativité</li>
+                        <li>Adaptabilité</li>
+                        <li>Résolution de problèmes</li>
+                    </ul>
+                </article>
 
-                    <article class="languages">
-                        <h4>Linguistiques</h4>
-                        <ul>
-                            <li>Français : Langue maternelle</li>
-                            <li>Anglais : Capacité professionnelle complète</li>
-                            <li>Espagnol : Bilingue</li>
+                <article class="languages">
+                    <h3>Compétences linguistiques</h3>
+                    <ul>
+                        <li>Français : Langue maternelle</li>
+                        <li>Anglais : Capacité professionnelle complète</li>
+                        <li>Espagnol : Bilingue</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="portfolio" id="portfolio">
+                <article class="container">
+                    <article class="carousel">
+                        <input type="radio" name="slides" checked="checked" id="slide-1">
+                        <input type="radio" name="slides" id="slide-2">
+                        <input type="radio" name="slides" id="slide-3">
+                        <input type="radio" name="slides" id="slide-4">
+                        <input type="radio" name="slides" id="slide-5">
+                        <input type="radio" name="slides" id="slide-6">
+                        <ul class="carousel__slides">
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="./Images/Scaloneta 800x450.jpg" alt="" class="img">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Tim Marshall</span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="./Images/tictactoe 800x450.jpg" alt="" class="img">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Christian Joudrey</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="./Images/bloompetals 800x450.jpg" alt="" class="img">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Steve Carter</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://picsum.photos/id/1045/800/450" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Aleksandra Boguslawska</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://picsum.photos/id/1049/800/450" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Rosan Harmens</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="https://picsum.photos/id/1052/800/450" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        <span class="credit">Photo: Annie Spratt</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>    
+                        <ul class="carousel__thumbnails">
+                            <li>
+                                <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150" alt=""></label>
+                            </li>
                         </ul>
                     </article>
                 </article>
             </section>
 
-            <section class="portfolio" id="portfolio">
+            <!-- <section class="portfolio" id="portfolio">
                 <h3>Portfolio</h3>
                 <article class="projects">
                     <article class="carousel-wrapper">
@@ -129,43 +231,49 @@
                         <span id="item-2"></span>
                         <span id="item-3"></span>
                         
-                        <div class="carousel-item item-1">
-                            <a href="https://noa-cen.github.io/Fansite_limonade/fansite3.html" target="_blank" 
-                            class="fansite glow">
-                            <h4>Fansite</h4>
-                            <p>Création d'un fansite personnel (La Scaloneta) présenté dans un site 
-                                accueil (Limonade) créé en groupe</p>
-                            </a>
+                        <article class="carousel-item item-1">
+                            <article class="text-block">
+                                <a href="https://noa-cen.github.io/Fansite_limonade/fansite3.html" target="_blank" 
+                                class="fansite glow">
+                                <h4>Projet : Fansite</h4>
+                                <p>Création d'un fansite personnel (La Scaloneta) présenté dans un site 
+                                    accueil (Limonade) créé en groupe</p>
+                                </a>
+                            </article>
                             <a class="arrow arrow-prev" href="#item-3"></a>
                             <a class="arrow arrow-next" href="#item-2"></a>
-                        </div>
+                        </article>
                         
-                        <div class="carousel-item item-2">
-                            <a href="https://github.com/noa-cen/PYTHON_tictactoe.git" target="_blank" 
-                            class="tictactoe glow">
-                                <h4>TicTacToe</h4>
-                                <p>Création d'un jeu TicTacToe en Python</p>
-                            </a>
+                        <article class="carousel-item item-2">
+                            <article class="text-block">
+                                <a href="https://github.com/noa-cen/PYTHON_tictactoe.git" target="_blank" 
+                                class="tictactoe glow">
+                                    <h4>Projet : Tic Tac Toe</h4>
+                                    <p>Création d'un jeu Tic Tac Toe en Python</p>
+                                </a>
+                            </article>
                             <a class="arrow arrow-prev" href="#item-1"></a>
                             <a class="arrow arrow-next" href="#item-3"></a>
-                        </div>
+                        </article>
                         
-                        <div class="carousel-item item-3">
-                            <a href="https://noa-cen.github.io/BloomPetals/" target="_blank" 
-                            class="bloompetals glow">
-                                <h4>BloomPetals</h4>
-                                <p>Création d'un site pour un fleuriste</p>
-                            </a>
+                        <article class="carousel-item item-3">
+                            <article class="text-block">
+                                <a href="https://noa-cen.github.io/BloomPetals/" target="_blank" 
+                                class="bloompetals glow">
+                                    <h4>Projet : BloomPetals</h4>
+                                    <p>Création d'un site web pour un fleuriste</p>
+                                </a>
+                            </article>
                             <a class="arrow arrow-prev" href="#item-2"></a>
                             <a class="arrow arrow-next" href="#item-1"></a>
-                        </div>
+                        </article>
                     </article>
                 </article>
-            </section>
+            </section> -->
 
             <section class="contact" id="contact">
                 <form method="post" action="traitement.php" class="form glow">
-                    <h3>Contact form</h3>
+                    <h3>Formulaire de contact</h3>
                     <fieldset class="contacter" id="contacter">
                         <div class="identite">
                             <article class="prenom">
@@ -211,7 +319,7 @@
                 </form>
 
                 <footer>
-                    <p>© Copyright 2024 | Noa Cengarle | Tous droits réservés</p>
+                    <h5>© Copyright 2024 | Noa Cengarle | Tous droits réservés</h5>
                     <img src="./Images/llama.png" alt="Dessin d'un llama">
                 </footer>
             </section>
