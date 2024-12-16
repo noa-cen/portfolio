@@ -16,6 +16,8 @@
     --light-grey: #3C3C3C;
 }
 
+
+
 html, body, section {
     block-size: 100%;
     color: var(--secondary-color);
@@ -168,6 +170,28 @@ p, li, a, label {
         }
     }
 }
+
+.typing-demo {
+    width: 19.5em;
+    animation: typing 2s steps(24), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+}
+  
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+      
+@keyframes blink {
+    50% {
+        border-color: var(--primary-color)
+    }
+}
 /* Fin section accueil */
 
 /* Section à propos de moi */
@@ -233,7 +257,7 @@ p, li, a, label {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    align-content: center;
+    align-content: center; 
 
     img {
         width: 70px;
@@ -247,6 +271,8 @@ p, li, a, label {
         border-radius: 20px;
         display: flex;
         flex-direction: column;
+        background-color: var(--dark-grey);
+        background: linear-gradient(var(--light-grey) 0%, var(--dark-grey) 100%);
         
         ul li {
             list-style-type: disc;
@@ -418,3 +444,122 @@ p, li, a, label {
     }
 }
 /* Fin section portfolio */
+
+/* Section formulaire de contact */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        
+        width: 100%;
+        border: 2px solid var(--primary-color);
+        border-radius: 16px;  
+        background-color: var(--dark-grey);
+        background: linear-gradient(var(--light-grey) 0%, var(--dark-grey) 100%);
+
+        textarea {
+            border-radius: 5px;
+            margin-top: 8px;
+            background-color: var(--secondary-color);
+        }
+        textarea, input#objet {
+            width: 80%;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            height: 25px;
+            border-radius: 5px;
+            margin-top: 8px;
+            background-color: var(--secondary-color);
+        }
+        article {
+            padding-top: 16px;
+        }
+        .contacter {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            
+            .identite, .coordonnees {
+                display: flex;
+                width: 80%;
+                gap: 20px;
+            }
+
+            .prenom, .nom, .email, .telephone {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+            }
+        }
+        .message {
+            display: flex;
+            flex-flow: column wrap;
+            .objet, .votremessage, .fichier {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .bouton {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+            button {
+                padding: 8px 32px;
+                margin: 8px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: "Montserrat";
+                font-weight: bold;
+                color: var(--secondary-color);
+                background-color: var(--primary-color);
+            }
+        
+            .hvr-outline-out {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px var(--primary-color);
+                position: relative;
+            }
+            .hvr-outline-out:before {
+                content: '';
+                position: absolute;
+                border: var(--primary-color) solid 2px;
+                border-radius: 5px;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-property: top, right, bottom, left;
+                transition-property: top, right, bottom, left;
+            }
+            .hvr-outline-out:hover:before, .hvr-outline-out:focus:before, .hvr-outline-out:active:before {
+                top: -6px;
+                right: -6px;
+                bottom: -6px;
+                left: -6px;
+            }
+        }
+    }
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 56px;
+
+        img {
+            width: 30px;
+        }
+    }
+}
+/* Fin section formulaire de contact */
