@@ -221,56 +221,54 @@
 
             <section class="contact" id="contact">
                 <h3>Formulaire de contact</h3>
-                <form method="post" action="traitement.php" class="form">
-                    <fieldset class="contacter" id="contacter">
-                        <div class="identite">
-                            <article class="prenom">
-                                <label for="prenom">Votre prénom :</label>
-                                <input type="text" name="prenom" id="prenom" required>
-                            </article>
-
-                            <article class="nom">
-                                <label for="nom">Votre nom :</label>
-                                <input type="text" name="nom" id="nom" required>
-                            </article>
-                        </div>
-
-                        <div class="coordonnees">
-                            <article class="email">
-                                <label for="email">Votre adresse e-mail :</label>
-                                <input type="email" name="email" id="email" required>
-                            </article>
-
-                            <article class="telephone">
-                                <label for="telephone">Votre numéro de téléphone :</label>
-                                <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}">
-                            </article>
-                        </div>
-                    </fieldset>
-                    
-                    <fieldset class="message" id="message">
-                        <article class="objet">
-                            <label for="objet">Objet :</label>
-                            <input type="text" name="objet" id="objet" required>
+                <article class="formulaire">
+                    <article class="identite">
+                        <article class="prenom">
+                            <label for="prenom">Votre prénom :</label>
+                            <input type="text" name="prenom" id="prenom" required>
                         </article>
-    
-                        <article class="votremessage">
-                            <label for="votremessage">Votre message :</label>
-                            <textarea name="votremessage" id="votremessage" 
-                            required rows="10"></textarea>
+
+                        <article class="nom">
+                            <label for="nom">Votre nom :</label>
+                            <input type="text" name="nom" id="nom" required>
                         </article>
-                    </fieldset>
+                    </article>
+
+                    <article class="coordonnees">
+                        <article class="email">
+                            <label for="email">Votre adresse e-mail :</label>
+                            <input type="email" name="email" id="email" required>
+                        </article>
+
+                        <article class="telephone">
+                            <label for="telephone">Votre numéro de téléphone :</label>
+                            <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}">
+                        </article>
+                    </article>
+                
+                    <article class="objet">
+                        <label for="objet">Objet :</label>
+                        <input type="text" name="objet" id="objet" required>
+                    </article>
+
+                    <article class="votremessage">
+                        <label for="votremessage">Votre message :</label>
+                        <textarea name="votremessage" id="votremessage" 
+                        required rows="10"></textarea>
+                    </article>
 
                     <article class="bouton">
                         <button class="hvr-outline-out" type="submit">Envoyer</button>
                     </article>
-                </form>
+                </article>
 
                 <footer>
                     <h5>© Copyright 2024 | Noa Cengarle | Tous droits réservés</h5>
                     <img src="./Images/llama.png" alt="Dessin d'un llama">
                 </footer>
+
             </section>
+
         </main>   
     </body>
 
