@@ -17,7 +17,7 @@
     
     <body>
         <header>
-            <section class="accueil">
+            <section class="accueil" id="accueil">
                 <nav class="navbar">
                     <img src="./Images/logo.png" alt="logo N" class="logo">
                     <ul class="nav-link">
@@ -124,142 +124,81 @@
 
             <section class="portfolio" id="portfolio">
                 <h3>Portfolio</h3>
-                <article class="container">
-                    <article class="carousel">
-                        <input type="radio" name="slides" checked="checked" id="slide-1">
-                        <input type="radio" name="slides" id="slide-2">
-                        <input type="radio" name="slides" id="slide-3">
-                        <input type="radio" name="slides" id="slide-4">
-                        <input type="radio" name="slides" id="slide-5">
-                        <input type="radio" name="slides" id="slide-6">
-                        <ul class="carousel__slides">
-                            <li class="carousel__slide">
-                                <figure>
-                                    <div>
-                                        <img src="./Images/Scaloneta 800x450.jpg" alt="" class="img">
-                                    </div>
-                                    <figcaption>
-                                        <h4>Fansite</h4>
-                                        Création d'un fansite personnel (La Scaloneta) présenté dans un site 
-                                        accueil (Limonade) créé en groupe
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li class="carousel__slide">
-                                <figure>
-                                    <div>
-                                        <img src="./Images/tictactoe 800x450.jpg" alt="" class="img">
-                                    </div>
-                                    <figcaption>
-                                        <h4>Tic Tac Toe</h4>
-                                        Création d'un jeu Tic Tac Toe en Python                      
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li class="carousel__slide">
-                                <figure>
-                                    <div>
-                                        <img src="./Images/bloompetals 800x450.jpg" alt="" class="img">
-                                    </div>
-                                    <figcaption>
-                                        <h4>BloomPetals</h4>
-                                        Création d'un site web pour un fleuriste                          
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li class="carousel__slide">
-                                <figure>
-                                    <div>
-                                        <img src="./Images/workinprogress 800x450.jpg" alt="" class="img">
-                                    </div>
-                                    <figcaption>                        
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li class="carousel__slide">
-                                <figure>
-                                    <div>
-                                        <img src="./Images/workinprogress 800x450.jpg" alt="" class="img">
-                                    </div>
-                                    <figcaption>                        
-                                    </figcaption>
-                                </figure>
-                            </li>
-                            <li class="carousel__slide">
-                                <figure>
-                                    <div>
-                                        <img src="./Images/workinprogress 800x450.jpg" alt="" class="img">
-                                    </div>
-                                    <figcaption>                        
-                                    </figcaption>
-                                </figure>
-                            </li>
-                        </ul>    
-                        <ul class="carousel__thumbnails">
-                            <li>
-                                <label for="slide-1"><img src="./Images/scaloneta 150x150.jpg" alt=""></label>
-                            </li>
-                            <li>
-                                <label for="slide-2"><img src="./Images/tictactoe 150x150.jpg" alt=""></label>
-                            </li>
-                            <li>
-                                <label for="slide-3"><img src="./Images/blompetals 150x150.jpg" alt=""></label>
-                            </li>
-                            <li>
-                                <label for="slide-4"><img src="./Images/workinprogress 150x150.jpg" alt=""></label>
-                            </li>
-                            <li>
-                                <label for="slide-5"><img src="./Images/workinprogress 150x150.jpg" alt=""></label>
-                            </li>
-                            <li>
-                                <label for="slide-6"><img src="./Images/workinprogress 150x150.jpg" alt=""></label>
-                            </li>
-                        </ul>
+                <article class="projets">
+                    <figure class="imghvr-flip-vert">
+                        <a href="https://noa-cen.github.io/Fansite_limonade/fansite3.html" 
+                        target="_blank"><img src="./Images/Scaloneta 800x450.jpg" 
+                        alt="Site web de la Scaloneta"></a>
+                        <figcaption>
+                            <h4>Projet de groupe : créer un fansite</h4>
+                            <p>Création d'un site accueil commun ("Limonade") regroupant 
+                                trois sites de fans individuels.</p>
+                        </figcaption>
+                    </figure>
+
+                    <article class="tictactoe">
+                        <a href="https://github.com/noa-cen/PYTHON_tictactoe" 
+                        target="_blank"><img src="./Images/tictactoe 800x450.jpg" 
+                        alt="Preview du jeu morpion"></a>
+                        <h4>Jeu du morpion en python</h4>
+                        <p>Création d'un jeu morpion en langage python.</p>
+                    </article>
+
+                    <article class="bloompetals">
+                        <a href="https://noa-cen.github.io/BloomPetals/" 
+                        target="_blank"><img src="./Images/bloompetals 800x450.jpg" 
+                        alt="Site web du fleuriste BloomPetals"></a>
+                        <h4>Site web de BloomPetals</h4>
+                        <p>Création d'un site web pour le fleuriste BloomPetals.</p>
                     </article>
                 </article>
             </section>
 
             <section class="contact" id="contact">
                 <h3>Formulaire de contact</h3>
-                <article class="formulaire">
-                    <article class="identite">
-                        <article class="prenom">
-                            <label for="prenom">Votre prénom :</label>
-                            <input type="text" name="prenom" id="prenom" required>
+                <article class="backtotop">
+                    <article class="formulaire">
+                        <article class="identite">
+                            <article class="prenom">
+                                <label for="prenom">Votre prénom :</label>
+                                <input type="text" name="prenom" id="prenom" required>
+                            </article>
+
+                            <article class="nom">
+                                <label for="nom">Votre nom :</label>
+                                <input type="text" name="nom" id="nom" required>
+                            </article>
                         </article>
 
-                        <article class="nom">
-                            <label for="nom">Votre nom :</label>
-                            <input type="text" name="nom" id="nom" required>
+                        <article class="coordonnees">
+                            <article class="email">
+                                <label for="email">Votre adresse e-mail :</label>
+                                <input type="email" name="email" id="email" required>
+                            </article>
+
+                            <article class="telephone">
+                                <label for="telephone">Votre numéro de téléphone :</label>
+                                <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}">
+                            </article>
+                        </article>
+                    
+                        <article class="objet">
+                            <label for="objet">Objet :</label>
+                            <input type="text" name="objet" id="objet" required>
+                        </article>
+
+                        <article class="votremessage">
+                            <label for="votremessage">Votre message :</label>
+                            <textarea name="votremessage" id="votremessage" 
+                            required rows="10"></textarea>
+                        </article>
+
+                        <article class="bouton">
+                            <button class="hvr-outline-out" type="submit">Envoyer</button>
                         </article>
                     </article>
-
-                    <article class="coordonnees">
-                        <article class="email">
-                            <label for="email">Votre adresse e-mail :</label>
-                            <input type="email" name="email" id="email" required>
-                        </article>
-
-                        <article class="telephone">
-                            <label for="telephone">Votre numéro de téléphone :</label>
-                            <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}">
-                        </article>
-                    </article>
-                
-                    <article class="objet">
-                        <label for="objet">Objet :</label>
-                        <input type="text" name="objet" id="objet" required>
-                    </article>
-
-                    <article class="votremessage">
-                        <label for="votremessage">Votre message :</label>
-                        <textarea name="votremessage" id="votremessage" 
-                        required rows="10"></textarea>
-                    </article>
-
-                    <article class="bouton">
-                        <button class="hvr-outline-out" type="submit">Envoyer</button>
-                    </article>
+                    <a href="#accueil"><p>Retour en haut <img src="./Images/arrow-white.svg" 
+                        alt="flèche vers le haut"></p></a>
                 </article>
 
                 <footer>
