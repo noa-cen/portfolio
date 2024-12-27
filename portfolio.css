@@ -5,8 +5,8 @@
     text-decoration: none;
     list-style-type: none;
     border: none;
-    border: red;
-    border-style: solid;
+    /* border: red;
+    border-style: solid; */
 }
 
 :root {
@@ -159,7 +159,7 @@ p, li, a, label {
             color: var(--dark-grey);
         }
         h1 {
-            font-size: 26pt;
+            font-size: 30pt;
         }
         span {
             color: var(--primary-color);
@@ -168,13 +168,13 @@ p, li, a, label {
 }
 
 .typing-demo {
-    width: 19.5em;
+    width: 80%;
     animation: typing 2s steps(24), blink .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
     font-family: monospace;
-    font-size: 2em;
+    font-size: 16pt;
 }
   
 @keyframes typing {
@@ -389,7 +389,7 @@ p, li, a, label {
 /* Fin section portfolio */
 
 /* Section formulaire de contact */
-.contact {
+/* .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -506,5 +506,5 @@ p, li, a, label {
             width: 30px;
         }
     }
-}
+} */
 /* Fin section formulaire de contact */
