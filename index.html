@@ -6,6 +6,7 @@
         <meta name="author" content="Noa Cengarle">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="portfolio.css">
+        <script src="https://kit.fontawesome.com/ecde10fa93.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" 
@@ -21,12 +22,12 @@
                 <nav class="navbar">
                     <img src="./Images/logo.png" alt="logo N" class="logo">
                     <ul class="nav-link">
-                        <li><a href="#aboutme"  class="linkBurger">A propos de moi</a></li>
-                        <li><a href="#skills"  class="linkBurger">Compétences</a></li>
-                        <li><a href="#portfolio" class="linkBurger">Portfolio</a></li>
+                        <li><a href="#aboutme"  class="linkBurger">à propos de moi</a></li>
+                        <li><a href="#skills"  class="linkBurger">compétences</a></li>
+                        <li><a href="#portfolio" class="linkBurger">portfolio</a></li>
                         <!-- <li><a href="#contact" class="linkBurger">Contact</a></li> -->
                         <li><a href="https://drive.google.com/file/d/1WtkJQ23LchnbNU6MOrvwpsDE_cb8SnoS/view?usp=drive_link" 
-                            target="_blank" class="linkBurger cv">Mon cv</a></li>
+                            target="_blank" class="linkBurger cv">mon cv</a></li>
                         <!-- <li><a href="index.html" class="linkBurger" 
                             onclick="changeLanguage('en')"><img 
                             src="./Images/Drapeaux/GB-UKM - United Kingdom.svg" 
@@ -76,7 +77,7 @@
                 </article>
                 
                 <article class="reseaux">
-                    <h3>Retrouvez-moi sur</h3>
+                    <h4>Retrouvez-moi sur</h4>
                     <article class="links">
                         <div class="line"></div>
                         <a href="https://github.com/noa-cen" target="_blank"><img 
@@ -126,32 +127,63 @@
 
             <section class="portfolio" id="portfolio">
                 <h3>Portfolio</h3>
-                <article class="projets">
-                    <figure class="imghvr-flip-vert">
-                        <a href="https://noa-cen.github.io/Fansite_limonade/fansite3.html" 
-                        target="_blank"><img src="./Images/Scaloneta 800x450.jpg" 
-                        alt="Site web de la Scaloneta"></a>
-                        <figcaption>
-                            <h4>Projet de groupe : créer un fansite</h4>
-                            <p>Création d'un site accueil commun ("Limonade") regroupant 
-                                trois sites de fans individuels.</p>
-                        </figcaption>
-                    </figure>
 
-                    <article class="tictactoe">
-                        <a href="https://github.com/noa-cen/PYTHON_tictactoe" 
-                        target="_blank"><img src="./Images/tictactoe 800x450.jpg" 
-                        alt="Preview du jeu morpion"></a>
-                        <h4>Jeu du morpion en python</h4>
-                        <p>Création d'un jeu morpion en langage python.</p>
+                <article class="portfolio-container">
+                    <article class="nav-portfolio" id="myBtnContainer">
+                        <button class="btn active" onclick="filterSelection('all')">tous</button>
+                        <button class="btn" 
+                            onclick="filterSelection('ecole')">projets d'école individuel</button>
+                        <button class="btn" 
+                            onclick="filterSelection('groupe')">projets d'école en groupe</button>
+                        <button class="btn" 
+                            onclick="filterSelection('perso')">projets personnels</button>
                     </article>
+                         
+                    <article class="items-container">
+                        <!-- Portfolio item --> 
+                        <article class="filterDiv groupe">
+                            <article class="portfolio-item">
+                                <img src="./Images/Scaloneta 800x450.jpg" alt="" class="img-res">
+                            </article>
+                            <article class="portfolio-info">
+                                <h4>Fansite</h4>
+                                <a href="#" class="rectangle"><i class="fa fa-plus"></i></a>
+                            </article>
+                        </article>
 
-                    <article class="bloompetals">
-                        <a href="https://noa-cen.github.io/BloomPetals/" 
-                        target="_blank"><img src="./Images/bloompetals 800x450.jpg" 
-                        alt="Site web du fleuriste BloomPetals"></a>
-                        <h4>Site web de BloomPetals</h4>
-                        <p>Création d'un site web pour le fleuriste BloomPetals.</p>
+                        <!-- Portfolio item --> 
+                        <article class="filterDiv groupe">
+                            <article class="portfolio-item">
+                                <img src="./Images/tictactoe 800x450.jpg" alt="" class="img-res">
+                            </article>
+                            <article class="portfolio-info">
+                                <h4>Jeu du morpion</h4>
+                                <a href="#"><i class="fa fa-plus"></i></a>
+                            </article>
+                        </article>
+
+                        <!-- Portfolio item --> 
+                        <article class="filterDiv perso">
+                            <article class="portfolio-item">
+                                <img src="./Images/workinprogress 800x450.jpg" alt="" class="img-res">
+                            </article>
+                            <article class="portfolio-info">
+                                <h4>Portfolio d'une photographe</h4>
+                                <a href="#"><i class="fa fa-plus"></i></a>
+                            </article>
+                        </article>
+
+                        <!-- Portfolio item --> 
+                        <article class="filterDiv ecole">
+                            <article class="portfolio-item">
+                                <img src="./Images/bloompetals 800x450.jpg" alt="" class="img-res">
+                            </article>
+                            <article class="portfolio-info">
+                                <h4>BloomPetals</h4>
+                                <a href="#"><i class="fa fa-plus"></i></a>
+                            </article>
+                        </article>
+                        
                     </article>
                 </article>
             </section>
@@ -202,29 +234,80 @@
                     <a href="#accueil"><p>Retour en haut <img src="./Images/arrow-white.svg" 
                         alt="flèche vers le haut"></p></a>
                 </article> -->
+        </main> 
 
-                <footer>
+        <footer>
+            <section class="footer">
+                <article class="page-scroll">
+                    <a href="#top" class="rectangle">
+                        <i class="fa fa-angle-double-up"></i>
+                    </a>
+                </article>
+                <article class="copyright">
                     <h5>© Copyright 2024 | Noa Cengarle | Tous droits réservés</h5>
                     <img src="./Images/llama.png" alt="Dessin d'un llama">
-                </footer>
+                </article>
+            </section>              
+        </footer>
 
-            </section>
-
-        </main>   
-    </body>
-
-    <script>
-        const menuHamburger = document.querySelector("#menu-hamburger")
-        const navLinks = document.querySelector(".nav-link")
-        document.querySelectorAll(".linkBurger").forEach( element => {
-            element.addEventListener('click', ()=>{
-                document.querySelector('#menu-hamburger').checked = false
+        <script>
+            const menuHamburger = document.querySelector("#menu-hamburger")
+            const navLinks = document.querySelector(".nav-link")
+            document.querySelectorAll(".linkBurger").forEach( element => {
+                element.addEventListener('click', ()=>{
+                    document.querySelector('#menu-hamburger').checked = false
+                    navLinks.classList.toggle('mobile-menu')
+                })
+            })
+            menuHamburger.addEventListener('click',() => {
                 navLinks.classList.toggle('mobile-menu')
             })
-        })
-        menuHamburger.addEventListener('click',() => {
-            navLinks.classList.toggle('mobile-menu')
-        })
-    </script>
 
+        </script>
+
+        <script>
+            filterSelection("all")
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("filterDiv");
+                if (c == "all") c = "";
+                for (i = 0; i < x.length; i++) {
+                    RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+                }
+            }
+
+            function AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                }
+            }
+
+            function RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function(){
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
+    </body>
 </html>
