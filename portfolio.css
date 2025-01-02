@@ -360,7 +360,7 @@ p, li, a, label {
                         color: var(--secondary-color);
                     }
 
-                    #myBtn {
+                    button {
                         cursor: pointer;
                     }
                 }
