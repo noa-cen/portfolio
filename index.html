@@ -6,6 +6,7 @@
         <meta name="author" content="Noa Cengarle">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="portfolio.css">
+        <script src="https://kit.fontawesome.com/ecde10fa93.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" 
@@ -17,85 +18,94 @@
     
     <body>
         <header>
-            <a href="https://noa-cen.github.io/portfolio/"><img src="./Images/Logo.jpg" 
-                alt="logo de N.C" class="nc"></a>
-            <nav class="navbar">
-                <ul class="nav-link">
-                    <li><a href="#aboutme"  class="linkBurger">About me</a></li>
-                    <li><a href="#skills"  class="linkBurger">Skills</a></li>
-                    <li><a href="#portfolio" class="linkBurger">Portfolio</a></li>
-                    <li><a href="#contact" class="linkBurger">Contact</a></li>
-                    <li><a href="https://drive.google.com/file/d/1WtkJQ23LchnbNU6MOrvwpsDE_cb8SnoS/view?usp=drive_link" 
-                        target="_blank" class="linkBurger"><div class="cv">Mon cv</div></a></li>
-                </ul>
-                <div class="menu">
-                    <input type="checkbox" id="menu-hamburger">
-                    <label for="menu-hamburger"></label>
-                </div>
-            </nav>
+            <section class="accueil" id="accueil">
+                <nav class="navbar">
+                    <img src="./Images/logo.png" alt="logo N" class="logo">
+                    <ul class="nav-link">
+                        <li><a href="#aboutme"  class="linkBurger">à propos de moi</a></li>
+                        <li><a href="#skills"  class="linkBurger">compétences</a></li>
+                        <li><a href="#portfolio" class="linkBurger">portfolio</a></li>
+                        <!-- <li><a href="#contact" class="linkBurger">Contact</a></li> -->
+                        <li><a href="https://drive.google.com/file/d/1WtkJQ23LchnbNU6MOrvwpsDE_cb8SnoS/view?usp=drive_link" 
+                            target="_blank" class="linkBurger cv">mon cv</a></li>
+                        <!-- <li><a href="index.html" class="linkBurger" 
+                            onclick="changeLanguage('en')"><img 
+                            src="./Images/Drapeaux/GB-UKM - United Kingdom.svg" 
+                            alt="Drapeau du Royaume-Uni" class="drapeau">/</a><a href="index.html" class="linkBurger" 
+                            onclick="changeLanguage('fr')"><img src="./Images/Drapeaux/FR - France.svg" 
+                            alt="Drapea de la France" class="drapeau"></a></li> -->
+                    </ul>
+                    <div class="menu">
+                        <input type="checkbox" id="menu-hamburger">
+                        <label for="menu-hamburger"></label>
+                    </div>
+                </nav>
+
+                <article class="hello">
+                    <h1>Hello, I am <span>Noa Cengarle</span></h1>
+                    <article class="typing-demo">
+                        <h2>Full stack web developer</h2>
+                    </article>
+                </article>
+            </section>
         </header>
 
         <main>
-            <section class="presentation">
-                <article class="texte">
-                    <h1>Hello, <br>I am <span class="nom">Noa Cengarle</span></h1>
-                    <h2>Full stack web developer</h2>
-                </article>
-                <img src="./Images/guanaco.jpg" alt="photo en noir et blanc d'un guanaco"
-                class="guanaco">
-            </section>
-
             <section class="aboutme" id="aboutme">
-                <img src="./Images/memoji.png" alt="Memoji personnel" class="memoji">
-                <article class="texte">
-                    <h3>About me</h3>
+                <article class="presentation">
+                    <img src="./Images/memoji.png" alt="Memoji personnel" class="memoji">
+                    <h3>A propos de moi</h3>
                     <p>Avec 10 ans d’expérience dans le service client et la gestion d’équipe, 
                         j’ai pris la décision de réorienter ma carrière vers le développement web. 
                         Actuellement en formation à l’école La Plateforme, je me consacre pleinement 
-                        à l’apprentissage.</p>
+                        à l’apprentissage.
+                    </p>
                     <p>Au fil de mon parcours professionnel, j’ai su développer des compétences 
                         solides en gestion du temps, en adaptation face aux imprévus, et en 
                         résolution créative de problèmes. Mon sens de la communication et mon esprit 
                         d’équipe me permettent de contribuer de manière efficace à la réussite des 
-                        projets sur lesquels je travaille.</p>
+                        projets sur lesquels je travaille.
+                    </p>
                     <p>Trilingue en français, anglais et espagnol, je suis convaincu que ma maîtrise 
                         des langues sera un véritable atout dans un environnement de travail 
-                        international.</p>
+                        international.
+                    </p>
                     <p>Je suis actuellement en recherche d’une alternance de 2 ans. Ce contrat 
                         serait l’occasion idéale pour mettre en pratique mes connaissances tout en 
-                        continuant à progresser dans un cadre dynamique et stimulant.</p>
+                        continuant à progresser dans un cadre dynamique et stimulant.
+                    </p>
                 </article>
-            </section>
-
-            <section class="reseaux" id="reseaux">
-                <h3>Retrouvez-moi sur</h3>
-                <article>
-                    <div class="line"></div>
-                    <a href="https://github.com/noa-cen" target="_blank"><img 
-                        src="./Images/github.svg" alt="logo GitHub"></a>
-                    <a href="https://www.figma.com/@noacen" target="_blank"><img 
-                        src="./Images/figma.svg" alt="logo Figma"></a>
-                    <a href="https://www.linkedin.com/in/noa-cengarle/" target="_blank"><img 
-                    src="./Images/linkedin.svg" alt="logo Linkedin"></a>
-                    <div class="line"></div>
+                
+                <article class="reseaux">
+                    <h4>Retrouvez-moi sur</h4>
+                    <article class="links">
+                        <div class="line"></div>
+                        <a href="https://github.com/noa-cen" target="_blank"><img 
+                            src="./Images/github.svg" alt="logo GitHub" title="Github"></a>
+                        <a href="https://www.figma.com/@noacen" target="_blank"><img 
+                            src="./Images/figma.svg" alt="logo Figma" title="Figma"></a>
+                        <a href="https://www.linkedin.com/in/noa-cengarle/" target="_blank"><img 
+                        src="./Images/linkedin.svg" alt="logo Linkedin" title="Linkedin"></a>
+                        <div class="line"></div>
+                    </article>
                 </article>
             </section>
 
             <section class="skills" id="skills">
                 <article class="hard">
-                    <h3>Hard skills</h3>
-                    <div class="images">
+                    <h3>Compétences techniques</h3>
+                    <article class="images">
                         <img src="./Images/html5.svg" alt="logo HTML5" title="HTML5">
                         <img src="./Images/css3.svg" alt="logo CSS3" title="CSS3">
-                        <!-- <img src="./Images/javascript.svg" alt="logo Javascript" title="Javascript">
-                        <img src="./Images/php.svg" alt="logo PHP" title="PHP"> -->
-                        <img src="./Images/swift.svg" alt="logo Swift" title="Swift">
+                        <img src="./Images/javascript.svg" alt="logo Javascript" title="Javascript">
+                        <!-- <img src="./Images/php.svg" alt="logo PHP" title="PHP">
+                        <img src="./Images/swift.svg" alt="logo Swift" title="Swift"> -->
                         <img src="./Images/python.svg" alt="logo Python" title="Python">
-                    </div>
+                    </article>
                 </article>
 
                 <article class="soft">
-                    <h3>Soft skills</h3>
+                    <h3>Compétences comportementales</h3>
                     <ul>
                         <li>Autonomie</li>
                         <li>Esprit d'équipe</li>
@@ -106,7 +116,7 @@
                 </article>
 
                 <article class="languages">
-                    <h3>Languages</h3>
+                    <h3>Compétences linguistiques</h3>
                     <ul>
                         <li>Français : Langue maternelle</li>
                         <li>Anglais : Capacité professionnelle complète</li>
@@ -117,41 +127,139 @@
 
             <section class="portfolio" id="portfolio">
                 <h3>Portfolio</h3>
-                    <article class="projects">
 
-                        <a href="https://noa-cen.github.io/Fansite_limonade/fansite3.html" target="_blank" 
-                        class="fansite glow">
-                        <h4>Fansite</h4>
-                        <img src="./Images/Scaloneta.jpg" 
-                        alt="Page d'accueil du fansite de La Scaloneta" class="scaloneta">
-                        <p>Création d'un fansite personnel (La Scaloneta) présenté dans un site 
-                            accueil (Limonade) créé en groupe</p>
-                        </a>
-
-                        <a href="https://github.com/noa-cen/PYTHON_tictactoe.git" target="_blank" 
-                        class="tictactoe glow">
-                            <h4>TicTacToe</h4>
-                            <img src="./Images/tictactoe.jpg" alt="Preview du TicTacToe" 
-                            class="morpion">
-                            <p>Création d'un jeu TicTacToe en Python</p>
-                        </a>
-
-                        <a href="https://noa-cen.github.io/BloomPetals/" target="_blank" 
-                        class="bloompetals glow">
-                            <h4>BloomPetals</h4>
-                            <img src="./Images/bloompetals.jpg" alt="Page d'accueil de BloomPetals" 
-                            class="bloom">
-                            <p>Création d'un site pour un fleuriste</p>
-                        </a>
-
+                <article class="portfolio-container">
+                    <article class="nav-portfolio" id="myBtnContainer">
+                        <button class="btn active" onclick="filterSelection('all')">tous</button>
+                        <button class="btn" 
+                            onclick="filterSelection('ecole')">projets d'école individuel</button>
+                        <button class="btn" 
+                            onclick="filterSelection('groupe')">projets d'école en groupe</button>
+                        <button class="btn" 
+                            onclick="filterSelection('perso')">projets personnels</button>
                     </article>
+                         
+                    <article class="items-container">
+                        <!-- Portfolio item Fansite --> 
+                        <article class="filterDiv groupe">
+                            <img src="./Images/Scaloneta 800x450.jpg" alt="" class="img-res">
+                            <article class="portfolio-info">
+                                <h4>Fansite</h4>
+                                <a href="#modal1" class="rectangle"><i class="fa fa-plus"></i></a>
+                            </article>
+                        </article>
+
+                        <!-- The Modal Fansite -->
+                        <article id="modal1" class="modal">
+                            <div class="modal__content">
+                                <h4>Fansite</h4>
+                                <p><span>Description du projet :</span> Développer un site web de fans 
+                                    regroupant vos célébrités, équipes de sport, groupes de musique 
+                                    (une par personne)….</p>
+                                <p>Chaque membre du projet doit créer plusieurs pages HTML 
+                                    utilisant le même fichier CSS nommé fansite1.css, fansite2.css et 
+                                    fansite3.css (un fichier par personne).</p>
+                                <p>Les pages suivantes doivent être présentent dans le projet :</p>
+                                <p>➔ Une page d’accueil nommée “index.html” dans laquelle on y trouve
+                                    une présentation succincte des 3 célébrités/groupes présentées.</p>
+                                <p>➔ Une page par célébrités/groupes nommée fansite1.html,
+                                    fansite2.html et fansite3.html</p>
+                                <button class="voirPage"><a href="https://noa-cen.github.io/Fansite_limonade/fansite3.html" 
+                                target="_blank">Voir la page</a></button>
+                                <a href="#portfolio" class="modal__close">&times;</a>
+                            </div>
+                        </article>
+
+                        <!-- Portfolio item Tictactoe --> 
+                        <article class="filterDiv groupe">
+                            <img src="./Images/tictactoe 800x450.jpg" alt="" class="img-res">
+                            <article class="portfolio-info">
+                                <h4>Jeu du morpion</h4>
+                                <a href="#modal2" class="rectangle"><i class="fa fa-plus"></i></a>
+                            </article>
+                        </article>
+
+                        <!-- The Modal Tictactoe -->
+                        <article id="modal2" class="modal">
+                            <div class="modal__content">
+                                <h4>Jeu du morpion</h4>
+                                <p><span>Description du projet :</span> Développez une version en ligne du 
+                                    fameux Tic Tac Toe.</p>
+                                <p>Dans ce jeu, deux joueurs s'affrontent. À tour de rôle, ils désignent une 
+                                    case et y insèrent alternativement un signe (X et O).
+                                    Le premier joueur qui arrive à faire un alignement vertical, 
+                                    horizontal ou diagonal de trois signes gagne la partie.</p>
+                                <p>Si le plateau de jeu est rempli de signes et qu’il n’y a pas 
+                                    d'alignement de trois, alors c’est un match nul.</p>
+                                <p>Il est préférable d’être deux pour jouer à ce jeu, mais comme vos visiteurs
+                                    sont parfois seuls, vous devez également créer une Intelligence 
+                                    Artificielle.</p>
+                                <button class="voirPage"><a href="https://github.com/noa-cen/PYTHON_tictactoe" 
+                                    target="_blank">Voir la page</a></button>
+                                <a href="#portfolio" class="modal__close">&times;</a>
+                            </div>
+                        </article>
+
+                        <!-- Portfolio item Portfolio --> 
+                        <article class="filterDiv perso">
+                            <img src="./Images/Sophie 800x450.jpg" alt="" class="img-res">
+                            <article class="portfolio-info">
+                                <h4>Portfolio d'une photographe</h4>
+                                <a href="#modal3" class="rectangle"><i class="fa fa-plus"></i></a>
+                            </article>
+                        </article>
+
+                        <!-- The Modal Portfolio -->
+                        <article id="modal3" class="modal">
+                            <div class="modal__content">
+                                <h4>Portfolio d'une photographe</h4>
+                                <p><span>Description du projet :</span> Sophie Victoria, photographe, 
+                                    vidéographe et créatrice de contenu m'a demandé de lui réaliser un 
+                                    portfolio professionnel.</p>
+                                <button class="voirPage"><a href="https://noa-cen.github.io/SophieVictoria/index.html" 
+                                    target="_blank">Voir la page</a></button>
+                                <a href="#portfolio" class="modal__close">&times;</a>
+                            </div>
+                        </article>
+
+                        <!-- Portfolio item Bloompetals --> 
+                        <article class="filterDiv ecole">
+                            <img src="./Images/bloompetals 800x450.jpg" alt="" class="img-res">
+                            <article class="portfolio-info">
+                                <h4>BloomPetals</h4>
+                                <a href="#modal4" class="rectangle"><i class="fa fa-plus"></i></a>
+                            </article>
+                        </article>
+
+                        <!-- The Modal Bloompetals -->
+                        <article id="modal4" class="modal">
+                            <div class="modal__content">
+                                <h4>BloomPetals</h4>
+                                <p><span>Description du projet :</span> L’équipe marketing de l’enseigne 
+                                    BloomPetals connaît l’importance d’être présente sur la toile, 
+                                    elle a besoin que vous lui créez une page web, grâce à vos 
+                                    connaissances fraîchement acquises.</p>
+                                <p>BloomPetals est une entreprise passionnée et créative spécialisée 
+                                    dans la conception de magnifiques bouquets floraux pour embellir 
+                                    vos événements spéciaux.</p>
+                                <p>Elle vous a mis à disposition une maquette pour la page d’accueil ainsi que
+                                    des images, mais ne possède pas le temps de vous fournir les maquettes des
+                                    autres pages.</p>
+                                <button class="voirPage"><a href="https://noa-cen.github.io/BloomPetals/" 
+                                    target="_blank">Voir la page</a></button>
+                                <a href="#portfolio" class="modal__close">&times;</a>
+                            </div>
+                        </article>
+                        
+                    </article>
+                </article>
             </section>
 
-            <section class="contact" id="contact">
-                <form method="post" action="traitement.php" class="form glow">
-                    <h3>Contact form</h3>
-                    <fieldset class="contacter" id="contacter">
-                        <div class="identite">
+            <!-- <section class="contact" id="contact">
+                <h3>Formulaire de contact</h3>
+                <article class="backtotop">
+                    <article class="formulaire">
+                        <article class="identite">
                             <article class="prenom">
                                 <label for="prenom">Votre prénom :</label>
                                 <input type="text" name="prenom" id="prenom" required>
@@ -161,9 +269,9 @@
                                 <label for="nom">Votre nom :</label>
                                 <input type="text" name="nom" id="nom" required>
                             </article>
-                        </div>
+                        </article>
 
-                        <div class="coordonnees">
+                        <article class="coordonnees">
                             <article class="email">
                                 <label for="email">Votre adresse e-mail :</label>
                                 <input type="email" name="email" id="email" required>
@@ -173,47 +281,96 @@
                                 <label for="telephone">Votre numéro de téléphone :</label>
                                 <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}">
                             </article>
-                        </div>
-                    </fieldset>
+                        </article>
                     
-                    <fieldset class="message" id="message">
                         <article class="objet">
                             <label for="objet">Objet :</label>
                             <input type="text" name="objet" id="objet" required>
                         </article>
-    
+
                         <article class="votremessage">
                             <label for="votremessage">Votre message :</label>
                             <textarea name="votremessage" id="votremessage" 
                             required rows="10"></textarea>
                         </article>
-                    </fieldset>
 
-                    <article class="bouton">
-                        <button class="hvr-outline-out" type="submit">Envoyer</button>
+                        <article class="bouton">
+                            <button class="hvr-outline-out" type="submit">Envoyer</button>
+                        </article>
                     </article>
-                </form>
-            </section>
-        </main>
+                    <a href="#accueil"><p>Retour en haut <img src="./Images/arrow-white.svg" 
+                        alt="flèche vers le haut"></p></a>
+                </article> -->
+        </main> 
 
         <footer>
-            <p>© Copyright 2024 | Noa Cengarle | Tous droits réservés</p>
-            <img src="./Images/llama.png" alt="Dessin d'un llama">
+            <section class="footer">
+                <article class="page-scroll">
+                    <a href="#top" class="rectangle"><i class="fa fa-angle-double-up"></i></a>
+                </article>
+                <article class="copyright">
+                    <h5>© Copyright 2024 | Noa Cengarle | Tous droits réservés</h5>
+                </article>
+            </section>              
         </footer>
     </body>
-
     <script>
+        // Menu burger
         const menuHamburger = document.querySelector("#menu-hamburger")
         const navLinks = document.querySelector(".nav-link")
+
         document.querySelectorAll(".linkBurger").forEach( element => {
             element.addEventListener('click', ()=>{
                 document.querySelector('#menu-hamburger').checked = false
                 navLinks.classList.toggle('mobile-menu')
             })
         })
+
         menuHamburger.addEventListener('click',() => {
             navLinks.classList.toggle('mobile-menu')
         })
-    </script>
 
+        // Sorting portfolio's projects
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+            }
+        }
+
+        function AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+        }
+
+        function RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
 </html>
