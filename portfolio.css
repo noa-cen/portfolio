@@ -20,16 +20,6 @@ body {
     color: var(--secondary-color);
 }
   
-section:not(.footer) {
-    padding: 32px 72px;
-    height: 100vh;
-
-    h3 {
-        padding-bottom: 40px;
-        font-size: 20pt;
-    }
-}
-  
 section:nth-of-type(even) {
     background: var(--light-grey);
 }
@@ -43,7 +33,6 @@ p, li, a, label {
     font-family: "Montserrat";
     color: var(--secondary-color);
 }
-/* Fin général à toute la page */
 
 /* Section accueil */
 .accueil {
@@ -95,9 +84,9 @@ p, li, a, label {
         label {
             width: 30px;
             height: 4px;
-            background-color: var(--primary-color);
+            background-color: var(--dark-grey);
             position: absolute;
-            top: 30px;
+            top: 40px;
             right: 40px;
             cursor: pointer;
             border-radius: 16px;
@@ -106,7 +95,7 @@ p, li, a, label {
                 content: " ";
                 width: 30px;
                 height: 4px;
-                background-color: var(--primary-color);
+                background-color: var(--dark-grey);
                 position: absolute;
                 display: block;
                 border-radius: 16px;
@@ -159,29 +148,6 @@ p, li, a, label {
         }
     }
 }
-
-.typing-demo {
-    width: 80%;
-    animation: typing 2s steps(24), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-family: monospace;
-    font-size: 16pt;
-}
-  
-@keyframes typing {
-    from {
-        width: 0
-    }
-}
-      
-@keyframes blink {
-    50% {
-        border-color: var(--primary-color)
-    }
-}
-/* Fin section accueil */
 
 /* Section à propos de moi */
 .aboutme {
@@ -243,41 +209,51 @@ p, li, a, label {
         }
     }
 }
-/* Fin section à propos de moi */
 
 /* Section compétences */
 .skills {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    align-content: center; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 
-    img {
-        width: 70px;
-    }
-
-    .hard, .soft, .languages {
-        width: 300px;
-        height: 200px;
-        padding: 40px;
-        border: 2px solid var(--primary-color);
-        border-radius: 15px;
+    .box {
         display: flex;
-        flex-direction: column;
-        background-color: var(--dark-grey);
-        background: linear-gradient(var(--light-grey) 0%, var(--dark-grey) 100%);
+        flex-flow: row wrap;
+        align-items: flex-start;
+        gap: 100px;
         
-        ul li {
-            list-style-type: disc;
-        }
+        .soft, .languages {
+            width: 300px;
+            height: 200px;
+            padding: 32px 48px;
+            border: 2px solid var(--primary-color);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--dark-grey);
+            background: linear-gradient(var(--light-grey) 0%, var(--dark-grey) 100%);
+            
+            ul li {
+                list-style-type: disc;
+            }
 
-        h3 {
-            text-align: center;
+            h3 {
+                text-align: center;
+            }
+        }
+    }
+    .hard {    
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        .fa-brands {
+            font-size: 50pt;
+            padding: 0 40px;
         }
     }
 }
-/* Fin section compétences */
 
 /* Section portfolio */
 .portfolio {
@@ -494,114 +470,7 @@ p, li, a, label {
 }
 
 /* Section formulaire de contact */
-/* .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .backtotop {
-        display: flex;
-        align-items: flex-end;
-
-        p {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            right: 100px;
-            font-size: 10pt;
-        }
-
-        img {
-            width: 15px;
-            transform: rotate(180deg);
-            margin-left: 8px;
-        }
-    
-        .formulaire {
-            border: 2px solid var(--primary-color);
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 32px 56px;
-            background-color: var(--dark-grey);
-            background: linear-gradient(var(--light-grey) 0%, var(--dark-grey) 100%);
-
-            label {
-                margin-bottom: 4px;
-            }
-            input, textarea {
-                width: 240px;
-                margin-bottom: 16px;
-                border-radius: 5px;
-            }
-            input {
-                height: 24px;
-            }
-            
-            .identite, .coordonnees {
-                display: flex;
-                gap: 20px;
-
-                .prenom, .nom, .email, .telephone {
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-
-            .objet, .votremessage {
-                display: flex;
-                flex-direction: column;
-
-                input, textarea {
-                    width: 500px;
-                }
-            }
-        }
-    }
-
-    .bouton {
-        button {
-            padding: 8px 32px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: "Montserrat";
-            font-weight: bold;
-            color: var(--secondary-color);
-            background-color: var(--primary-color);
-        }
-
-        .hvr-outline-out {
-            display: inline-block;
-            vertical-align: middle;
-            -webkit-transform: perspective(1px) translateZ(0);
-            transform: perspective(1px) translateZ(0);
-            box-shadow: 0 0 1px var(--primary-color);
-            position: relative;
-        }
-        .hvr-outline-out:before {
-            content: '';
-            position: absolute;
-            border: var(--primary-color) solid 2px;
-            border-radius: 5px;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-            -webkit-transition-property: top, right, bottom, left;
-            transition-property: top, right, bottom, left;
-        }
-        .hvr-outline-out:hover:before, .hvr-outline-out:focus:before, .hvr-outline-out:active:before {
-            top: -6px;
-            right: -6px;
-            bottom: -6px;
-            left: -6px;
-        }
-    }
-} */
-    .footer {
+.footer {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -653,6 +522,257 @@ p, li, a, label {
                 width: 30px;
             }
         }
-    }
+}
 
-/* Fin section formulaire de contact */
+/* Media queries */
+/* Extra large devices (large desktops, 1066px and up) */
+@media (min-width: 1066px) {
+    section:not(.footer) {
+        height: 100vh;
+    }
+}
+
+/* Devices less than 1066px */
+@media (max-width: 1065.98px) {
+    .accueil {
+        height: 100vh;
+    }
+    .skills {
+        gap: 56px;
+
+        .box {
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+        .hard {   
+            padding: 32px 72px;
+            .fa-brands {
+                font-size: 50pt;
+                padding: 0 32px;
+            }
+        }
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    section:not(.footer) {
+        padding: 32px 72px;
+    
+        h3 {
+            padding-bottom: 40px;
+            font-size: 20pt;
+        }
+    }
+    .typing-demo {
+        width: 100%;
+        animation: typing 2s steps(24), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        font-family: monospace;
+        font-size: 16pt;
+    }
+      
+    @keyframes typing {
+        from {
+            width: 0
+        }
+    }
+          
+    @keyframes blink {
+        50% {
+            border-color: var(--primary-color)
+        }
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    section:not(.footer) {
+        padding: 32px 40px;
+    
+        h3 {
+            padding-bottom: 32px;
+            font-size: 16pt;
+        }
+    }
+    .accueil {
+        .navbar {
+            width: 100%;
+
+            .logo {
+                width: 80px;
+                position: absolute;
+                top: 10px;
+            }
+        
+            .nav-link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: var(--secondary-color);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: -100%;
+                transition: all 0.5s ease;
+                z-index: 1;
+                
+                li {
+                    font-size: 1.5em;
+                }
+        
+                li a {
+                    font-weight: bolder;
+                    padding: 32px 0;
+                }
+            }
+        
+            .menu {
+                display: block;
+                z-index: 2;
+            }
+            
+            .nav-link.mobile-menu {
+                margin-left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .hello {
+            left: 100px;
+            padding: 0 40px;
+    
+            h1 {
+                font-size: 20pt;
+            }
+        }
+    }
+    .aboutme {
+        .presentation {
+            padding: 0 56px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            p {
+                text-align: justify;
+            }
+        }
+    
+        .reseaux {
+            h4 {
+                padding-bottom: 32px;
+            }
+    
+            .links {
+                .line {
+                    width: 200px;
+                }
+    
+                img {
+                    width: 60px;
+                }
+            }
+        }
+    }
+}
+
+/* Medium devices (tablets, less than 768px) */
+@media (max-width: 767.98px) {
+    .accueil {
+        background-position: 20% 50%;
+
+        .hello {
+            left: 70px;
+        }
+    }
+    .aboutme {
+        .presentation {
+            padding: 0 24px;
+        }
+    
+        .reseaux {
+            .links {
+                .line {
+                    width: 100px;
+                }
+            }
+        }
+    }
+    .skills {
+        gap: 40px;
+
+        .box {
+            .soft, .languages {
+                width: 250px;
+                height: 200px;
+                padding: 24px 48px;
+            }
+        }
+        .hard {   
+            padding: 32px 16px;
+            .fa-brands {
+                font-size: 40pt;
+                padding: 0 16px;
+            }
+        }
+    }
+}
+
+/* Small devices (landscape phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .accueil {
+        background-position: 38% 50%;
+
+        .hello {
+            top: 130px;
+            left: 20px;
+            h1 {
+                font-size: 16pt;
+            }
+            h2 {
+                font-size: 14pt;
+            }
+        }
+    }
+    .aboutme {
+        .presentation {
+            padding: 0 8px;
+        }
+    
+        .reseaux {
+            .links {
+                .line {
+                    display: none;
+                }
+            }
+        }
+    }
+    .skills {
+        .box {
+            .soft, .languages {
+                width: 250px;
+                padding: 8px;
+                ul li {
+                    text-align: center;
+                    list-style-type: none;
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }  
+        }
+        .hard {   
+            padding: 32px 16px;
+            .fa-brands {
+                font-size: 40pt;
+                padding: 0 16px;
+            }
+        }
+    }
+}
