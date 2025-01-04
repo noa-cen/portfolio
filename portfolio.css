@@ -215,38 +215,42 @@ p, li, a, label {
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center; 
     justify-content: space-evenly;
 
     .box {
         display: flex;
         flex-flow: row wrap;
+        align-items: flex-start;
+        gap: 100px;
+        
+        .soft, .languages {
+            width: 300px;
+            height: 200px;
+            padding: 32px 48px;
+            border: 2px solid var(--primary-color);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--dark-grey);
+            background: linear-gradient(var(--light-grey) 0%, var(--dark-grey) 100%);
+            
+            ul li {
+                list-style-type: disc;
+            }
+
+            h3 {
+                text-align: center;
+            }
+        }
+    }
+    .hard {    
+        display: flex;
+        flex-flow: row wrap;
         align-items: center;
         justify-content: center;
-        align-content: space-around;
-    }
-
-    img {
-        width: 70px;
-    }
-
-    .soft, .languages {
-        width: 300px;
-        height: 200px;
-        padding: 40px;
-        border: 2px solid var(--primary-color);
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--dark-grey);
-        background: linear-gradient(var(--light-grey) 0%, var(--dark-grey) 100%);
-        
-        ul li {
-            list-style-type: disc;
-        }
-
-        h3 {
-            text-align: center;
+        .fa-brands {
+            font-size: 50pt;
+            padding: 0 40px;
         }
     }
 }
@@ -466,114 +470,7 @@ p, li, a, label {
 }
 
 /* Section formulaire de contact */
-/* .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .backtotop {
-        display: flex;
-        align-items: flex-end;
-
-        p {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            right: 100px;
-            font-size: 10pt;
-        }
-
-        img {
-            width: 15px;
-            transform: rotate(180deg);
-            margin-left: 8px;
-        }
-    
-        .formulaire {
-            border: 2px solid var(--primary-color);
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 32px 56px;
-            background-color: var(--dark-grey);
-            background: linear-gradient(var(--light-grey) 0%, var(--dark-grey) 100%);
-
-            label {
-                margin-bottom: 4px;
-            }
-            input, textarea {
-                width: 240px;
-                margin-bottom: 16px;
-                border-radius: 5px;
-            }
-            input {
-                height: 24px;
-            }
-            
-            .identite, .coordonnees {
-                display: flex;
-                gap: 20px;
-
-                .prenom, .nom, .email, .telephone {
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-
-            .objet, .votremessage {
-                display: flex;
-                flex-direction: column;
-
-                input, textarea {
-                    width: 500px;
-                }
-            }
-        }
-    }
-
-    .bouton {
-        button {
-            padding: 8px 32px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: "Montserrat";
-            font-weight: bold;
-            color: var(--secondary-color);
-            background-color: var(--primary-color);
-        }
-
-        .hvr-outline-out {
-            display: inline-block;
-            vertical-align: middle;
-            -webkit-transform: perspective(1px) translateZ(0);
-            transform: perspective(1px) translateZ(0);
-            box-shadow: 0 0 1px var(--primary-color);
-            position: relative;
-        }
-        .hvr-outline-out:before {
-            content: '';
-            position: absolute;
-            border: var(--primary-color) solid 2px;
-            border-radius: 5px;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-            -webkit-transition-property: top, right, bottom, left;
-            transition-property: top, right, bottom, left;
-        }
-        .hvr-outline-out:hover:before, .hvr-outline-out:focus:before, .hvr-outline-out:active:before {
-            top: -6px;
-            right: -6px;
-            bottom: -6px;
-            left: -6px;
-        }
-    }
-} */
-    .footer {
+.footer {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -625,7 +522,7 @@ p, li, a, label {
                 width: 30px;
             }
         }
-    }
+}
 
 /* Media queries */
 /* Extra large devices (large desktops, 1066px and up) */
@@ -639,6 +536,22 @@ p, li, a, label {
 @media (max-width: 1065.98px) {
     .accueil {
         height: 100vh;
+    }
+    .skills {
+        gap: 56px;
+
+        .box {
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+        }
+        .hard {   
+            padding: 32px 72px;
+            .fa-brands {
+                font-size: 50pt;
+                padding: 0 32px;
+            }
+        }
     }
 }
 
@@ -791,6 +704,24 @@ p, li, a, label {
             }
         }
     }
+    .skills {
+        gap: 40px;
+
+        .box {
+            .soft, .languages {
+                width: 250px;
+                height: 200px;
+                padding: 24px 48px;
+            }
+        }
+        .hard {   
+            padding: 32px 16px;
+            .fa-brands {
+                font-size: 40pt;
+                padding: 0 16px;
+            }
+        }
+    }
 }
 
 /* Small devices (landscape phones, less than 576px) */
@@ -823,9 +754,25 @@ p, li, a, label {
         }
     }
     .skills {
-        padding: 32px 8px !important;
-        .soft, .languages {
-            padding: 32px;
+        .box {
+            .soft, .languages {
+                width: 250px;
+                padding: 8px;
+                ul li {
+                    text-align: center;
+                    list-style-type: none;
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }  
+        }
+        .hard {   
+            padding: 32px 16px;
+            .fa-brands {
+                font-size: 40pt;
+                padding: 0 16px;
+            }
         }
     }
 }
