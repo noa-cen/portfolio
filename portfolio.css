@@ -20,16 +20,6 @@ body {
     color: var(--secondary-color);
 }
   
-section:not(.footer) {
-    padding: 32px 72px;
-    height: 100vh;
-
-    h3 {
-        padding-bottom: 40px;
-        font-size: 20pt;
-    }
-}
-  
 section:nth-of-type(even) {
     background: var(--light-grey);
 }
@@ -43,7 +33,6 @@ p, li, a, label {
     font-family: "Montserrat";
     color: var(--secondary-color);
 }
-/* Fin général à toute la page */
 
 /* Section accueil */
 .accueil {
@@ -95,9 +84,9 @@ p, li, a, label {
         label {
             width: 30px;
             height: 4px;
-            background-color: var(--primary-color);
+            background-color: var(--dark-grey);
             position: absolute;
-            top: 30px;
+            top: 40px;
             right: 40px;
             cursor: pointer;
             border-radius: 16px;
@@ -106,7 +95,7 @@ p, li, a, label {
                 content: " ";
                 width: 30px;
                 height: 4px;
-                background-color: var(--primary-color);
+                background-color: var(--dark-grey);
                 position: absolute;
                 display: block;
                 border-radius: 16px;
@@ -159,29 +148,6 @@ p, li, a, label {
         }
     }
 }
-
-.typing-demo {
-    width: 80%;
-    animation: typing 2s steps(24), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    font-family: monospace;
-    font-size: 16pt;
-}
-  
-@keyframes typing {
-    from {
-        width: 0
-    }
-}
-      
-@keyframes blink {
-    50% {
-        border-color: var(--primary-color)
-    }
-}
-/* Fin section accueil */
 
 /* Section à propos de moi */
 .aboutme {
@@ -243,21 +209,28 @@ p, li, a, label {
         }
     }
 }
-/* Fin section à propos de moi */
 
 /* Section compétences */
 .skills {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     align-content: center; 
+    justify-content: space-evenly;
+
+    .box {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: space-around;
+    }
 
     img {
         width: 70px;
     }
 
-    .hard, .soft, .languages {
+    .soft, .languages {
         width: 300px;
         height: 200px;
         padding: 40px;
@@ -277,7 +250,6 @@ p, li, a, label {
         }
     }
 }
-/* Fin section compétences */
 
 /* Section portfolio */
 .portfolio {
@@ -655,4 +627,205 @@ p, li, a, label {
         }
     }
 
-/* Fin section formulaire de contact */
+/* Media queries */
+/* Extra large devices (large desktops, 1066px and up) */
+@media (min-width: 1066px) {
+    section:not(.footer) {
+        height: 100vh;
+    }
+}
+
+/* Devices less than 1066px */
+@media (max-width: 1065.98px) {
+    .accueil {
+        height: 100vh;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    section:not(.footer) {
+        padding: 32px 72px;
+    
+        h3 {
+            padding-bottom: 40px;
+            font-size: 20pt;
+        }
+    }
+    .typing-demo {
+        width: 100%;
+        animation: typing 2s steps(24), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid;
+        font-family: monospace;
+        font-size: 16pt;
+    }
+      
+    @keyframes typing {
+        from {
+            width: 0
+        }
+    }
+          
+    @keyframes blink {
+        50% {
+            border-color: var(--primary-color)
+        }
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    section:not(.footer) {
+        padding: 32px 40px;
+    
+        h3 {
+            padding-bottom: 32px;
+            font-size: 16pt;
+        }
+    }
+    .accueil {
+        .navbar {
+            width: 100%;
+
+            .logo {
+                width: 80px;
+                position: absolute;
+                top: 10px;
+            }
+        
+            .nav-link {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: var(--secondary-color);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: -100%;
+                transition: all 0.5s ease;
+                z-index: 1;
+                
+                li {
+                    font-size: 1.5em;
+                }
+        
+                li a {
+                    font-weight: bolder;
+                    padding: 32px 0;
+                }
+            }
+        
+            .menu {
+                display: block;
+                z-index: 2;
+            }
+            
+            .nav-link.mobile-menu {
+                margin-left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .hello {
+            left: 100px;
+            padding: 0 40px;
+    
+            h1 {
+                font-size: 20pt;
+            }
+        }
+    }
+    .aboutme {
+        .presentation {
+            padding: 0 56px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            p {
+                text-align: justify;
+            }
+        }
+    
+        .reseaux {
+            h4 {
+                padding-bottom: 32px;
+            }
+    
+            .links {
+                .line {
+                    width: 200px;
+                }
+    
+                img {
+                    width: 60px;
+                }
+            }
+        }
+    }
+}
+
+/* Medium devices (tablets, less than 768px) */
+@media (max-width: 767.98px) {
+    .accueil {
+        background-position: 20% 50%;
+
+        .hello {
+            left: 70px;
+        }
+    }
+    .aboutme {
+        .presentation {
+            padding: 0 24px;
+        }
+    
+        .reseaux {
+            .links {
+                .line {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+/* Small devices (landscape phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .accueil {
+        background-position: 38% 50%;
+
+        .hello {
+            top: 130px;
+            left: 20px;
+            h1 {
+                font-size: 16pt;
+            }
+            h2 {
+                font-size: 14pt;
+            }
+        }
+    }
+    .aboutme {
+        .presentation {
+            padding: 0 8px;
+        }
+    
+        .reseaux {
+            .links {
+                .line {
+                    display: none;
+                }
+            }
+        }
+    }
+    .skills {
+        padding: 32px 8px !important;
+        .soft, .languages {
+            padding: 32px;
+        }
+    }
+}

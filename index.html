@@ -22,18 +22,11 @@
                 <nav class="navbar">
                     <img src="./Images/logo.png" alt="logo N" class="logo">
                     <ul class="nav-link">
-                        <li><a href="#aboutme"  class="linkBurger">à propos de moi</a></li>
-                        <li><a href="#skills"  class="linkBurger">compétences</a></li>
+                        <li><a href="#aboutme" class="linkBurger">à propos de moi</a></li>
+                        <li><a href="#skills" class="linkBurger">compétences</a></li>
                         <li><a href="#portfolio" class="linkBurger">portfolio</a></li>
-                        <!-- <li><a href="#contact" class="linkBurger">Contact</a></li> -->
                         <li><a href="https://drive.google.com/file/d/1WtkJQ23LchnbNU6MOrvwpsDE_cb8SnoS/view?usp=drive_link" 
                             target="_blank" class="linkBurger cv">mon cv</a></li>
-                        <!-- <li><a href="index.html" class="linkBurger" 
-                            onclick="changeLanguage('en')"><img 
-                            src="./Images/Drapeaux/GB-UKM - United Kingdom.svg" 
-                            alt="Drapeau du Royaume-Uni" class="drapeau">/</a><a href="index.html" class="linkBurger" 
-                            onclick="changeLanguage('fr')"><img src="./Images/Drapeaux/FR - France.svg" 
-                            alt="Drapea de la France" class="drapeau"></a></li> -->
                     </ul>
                     <div class="menu">
                         <input type="checkbox" id="menu-hamburger">
@@ -42,7 +35,7 @@
                 </nav>
 
                 <article class="hello">
-                    <h1>Hello, I am <span>Noa Cengarle</span></h1>
+                    <h1>Hello,<br> I am <span>Noa Cengarle</span></h1>
                     <article class="typing-demo">
                         <h2>Full stack web developer</h2>
                     </article>
@@ -92,36 +85,37 @@
             </section>
 
             <section class="skills" id="skills">
+                <article class="box">
+                    <article class="soft">
+                        <h3>Compétences comportementales</h3>
+                        <ul>
+                            <li>Autonomie</li>
+                            <li>Esprit d'équipe</li>
+                            <li>Créativité</li>
+                            <li>Adaptabilité</li>
+                            <li>Résolution de problèmes</li>
+                        </ul>
+                    </article>
+
+                    <article class="languages">
+                        <h3>Compétences linguistiques</h3>
+                        <ul>
+                            <li>Français : Langue maternelle</li>
+                            <li>Anglais : Capacité professionnelle complète</li>
+                            <li>Espagnol : Bilingue</li>
+                        </ul>
+                    </article>
+                </article>
                 <article class="hard">
-                    <h3>Compétences techniques</h3>
                     <article class="images">
+                        <i class="fa-brands fa-html5 fa-2xl"></i>
                         <img src="./Images/html5.svg" alt="logo HTML5" title="HTML5">
                         <img src="./Images/css3.svg" alt="logo CSS3" title="CSS3">
                         <img src="./Images/javascript.svg" alt="logo Javascript" title="Javascript">
-                        <!-- <img src="./Images/php.svg" alt="logo PHP" title="PHP">
-                        <img src="./Images/swift.svg" alt="logo Swift" title="Swift"> -->
+                        <img src="./Images/php.svg" alt="logo PHP" title="PHP">
+                        <img src="./Images/swift.svg" alt="logo Swift" title="Swift">
                         <img src="./Images/python.svg" alt="logo Python" title="Python">
                     </article>
-                </article>
-
-                <article class="soft">
-                    <h3>Compétences comportementales</h3>
-                    <ul>
-                        <li>Autonomie</li>
-                        <li>Esprit d'équipe</li>
-                        <li>Créativité</li>
-                        <li>Adaptabilité</li>
-                        <li>Résolution de problèmes</li>
-                    </ul>
-                </article>
-
-                <article class="languages">
-                    <h3>Compétences linguistiques</h3>
-                    <ul>
-                        <li>Français : Langue maternelle</li>
-                        <li>Anglais : Capacité professionnelle complète</li>
-                        <li>Espagnol : Bilingue</li>
-                    </ul>
                 </article>
             </section>
 
@@ -254,53 +248,6 @@
                     </article>
                 </article>
             </section>
-
-            <!-- <section class="contact" id="contact">
-                <h3>Formulaire de contact</h3>
-                <article class="backtotop">
-                    <article class="formulaire">
-                        <article class="identite">
-                            <article class="prenom">
-                                <label for="prenom">Votre prénom :</label>
-                                <input type="text" name="prenom" id="prenom" required>
-                            </article>
-
-                            <article class="nom">
-                                <label for="nom">Votre nom :</label>
-                                <input type="text" name="nom" id="nom" required>
-                            </article>
-                        </article>
-
-                        <article class="coordonnees">
-                            <article class="email">
-                                <label for="email">Votre adresse e-mail :</label>
-                                <input type="email" name="email" id="email" required>
-                            </article>
-
-                            <article class="telephone">
-                                <label for="telephone">Votre numéro de téléphone :</label>
-                                <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}">
-                            </article>
-                        </article>
-                    
-                        <article class="objet">
-                            <label for="objet">Objet :</label>
-                            <input type="text" name="objet" id="objet" required>
-                        </article>
-
-                        <article class="votremessage">
-                            <label for="votremessage">Votre message :</label>
-                            <textarea name="votremessage" id="votremessage" 
-                            required rows="10"></textarea>
-                        </article>
-
-                        <article class="bouton">
-                            <button class="hvr-outline-out" type="submit">Envoyer</button>
-                        </article>
-                    </article>
-                    <a href="#accueil"><p>Retour en haut <img src="./Images/arrow-white.svg" 
-                        alt="flèche vers le haut"></p></a>
-                </article> -->
         </main> 
 
         <footer>
@@ -314,6 +261,7 @@
             </section>              
         </footer>
     </body>
+    
     <script>
         // Menu burger
         const menuHamburger = document.querySelector("#menu-hamburger")
