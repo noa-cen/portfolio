@@ -271,6 +271,7 @@ p, li, a, label {
 
         .nav-portfolio {
             border-top: 1px solid var(--light-grey);
+            border-left: 1px solid var(--light-grey);
             border-right: 1px solid var(--light-grey);
             border-bottom: 2px solid var(--primary-color);
             margin-bottom: 32px;
@@ -517,6 +518,7 @@ p, li, a, label {
     
         .copyright {
             padding-top: 40px;
+            text-align: center;
             
             img {
                 width: 30px;
@@ -551,6 +553,11 @@ p, li, a, label {
                 font-size: 50pt;
                 padding: 0 32px;
             }
+        }
+    }
+    .portfolio {
+        .portfolio-container {
+            padding: 32px;
         }
     }
 }
@@ -680,6 +687,37 @@ p, li, a, label {
             }
         }
     }
+    .portfolio {
+        .portfolio-container {
+            .nav-portfolio {
+                .btn {
+                    padding: 8px 16px;
+                    font-size: 12pt;
+                }
+            }
+    
+            .items-container {
+                .filterDiv {
+                    .img-res {
+                        width: 250px;
+                    }
+                }
+                .modal {
+                    .modal__content {
+                        width: 80%;
+                        
+                        h4 {
+                            padding-bottom: 16px;
+                        }
+    
+                        p {
+                            padding: 8px 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Medium devices (tablets, less than 768px) */
@@ -719,6 +757,19 @@ p, li, a, label {
             .fa-brands {
                 font-size: 40pt;
                 padding: 0 16px;
+            }
+        }
+    }
+    .portfolio {
+        .portfolio-container {
+            .items-container {
+                align-items: center;
+                justify-content: center;
+                .filterDiv {
+                    .img-res {
+                        width: 300px;
+                    }
+                }
             }
         }
     }
@@ -772,6 +823,27 @@ p, li, a, label {
             .fa-brands {
                 font-size: 40pt;
                 padding: 0 16px;
+            }
+        }
+    }
+    .portfolio {
+        .portfolio-container {
+            padding: 0;
+
+            .items-container {
+                .filterDiv {
+                    .img-res {
+                        width: 250px;
+                    }
+                }
+                .modal {
+                    .modal__content {
+                        width: 70%;
+                        p {
+                            padding: 0;
+                        }
+                    }
+                }
             }
         }
     }
