@@ -1,0 +1,13 @@
+/* Variables */
+$font-title: "Roboto mono";
+$font-text: "Montserrat";
+
+$primary-color: #E88307;
+$secondary-color: #D9D9D9;
+$dark-grey: #282828;
+$light-grey: #3C3C3C;
+
+h3 {
+    font-family: $font-title;
+    color: $secondary-color;
+}
