@@ -11,7 +11,7 @@
 
 :root {
     --primary-color: #E88307;
-    --secondary-color: #D9D9D9;
+    --secondary-color: #eeeeee;
     --dark-grey: #222222;
     --light-grey: #3C3C3C;
 }
@@ -245,7 +245,7 @@ p, li, a, label {
     }
     .hard {    
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row;
         align-items: center;
         justify-content: center;
         .fa-brands {
@@ -535,7 +535,7 @@ p, li, a, label {
 }
 
 /* Devices less than 1066px */
-@media (max-width: 1065.98px) {
+@media (max-width: 1066px) {
     .accueil {
         height: 100vh;
     }
@@ -596,7 +596,7 @@ p, li, a, label {
 }
 
 /* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
     section:not(.footer) {
         padding: 32px 40px;
     
@@ -721,7 +721,7 @@ p, li, a, label {
 }
 
 /* Medium devices (tablets, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     .accueil {
         background-position: 20% 50%;
 
@@ -762,6 +762,12 @@ p, li, a, label {
     }
     .portfolio {
         .portfolio-container {
+            .nav-portfolio {
+                .btn {
+                    width: 100%;
+                }
+            }
+
             .items-container {
                 align-items: center;
                 justify-content: center;
@@ -776,7 +782,7 @@ p, li, a, label {
 }
 
 /* Small devices (landscape phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
     .accueil {
         background-position: 38% 50%;
 
@@ -821,8 +827,8 @@ p, li, a, label {
         .hard {   
             padding: 32px 16px;
             .fa-brands {
-                font-size: 40pt;
-                padding: 0 16px;
+                font-size: 30pt;
+                padding: 0 8px;
             }
         }
     }
