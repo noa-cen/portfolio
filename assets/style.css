@@ -1,0 +1,231 @@
+/* General */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    box-sizing: border-box;
+    /* border: red;
+    border-style: solid; */
+    font-family: "SF Pro";
+}
+
+@font-face {
+    font-family: SF Pro;
+    src: url("font/San\ Francisco\ Pro\ Display/--light");
+}
+
+:root {
+    --dark: #282828;
+    --grey: #424242;
+    --light: #D9D9D9;
+    --orange: #E88307;
+    --background: #ffffff15;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+a {
+    color: var(--light);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+/* Home */
+
+header {
+    height: 100svh;
+    max-width: 100svw;
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+}
+
+.home {
+    background-image: url("portfolio.png");
+    background-size: cover;
+    height: calc(100% - 36px);
+    width: calc(100% - 24px);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--dark);
+
+    .navbar ul {
+        background-color: var(--dark);
+        margin: 8px;
+        padding: 4px 48px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        gap: 136px;
+    }
+
+    .active {
+        background-color: var(--grey);
+        padding: 12px 48px;
+        border-radius: 40px;
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        position: relative;
+        left: 20%;
+
+        h1 {
+            font-size: 72px;
+        }
+
+        h2 {
+            font-size: 44px;
+        }
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        gap: 136px;
+        position: relative;
+        left: 20%;
+    }
+}
+
+/* About me */
+
+main {
+    margin: 40px 20px;
+}
+
+.aboutme {
+    /* border: 3px solid var(--light);
+    border-radius: 20px;
+    background-color: var(--background); */
+    padding: 40px 56px;
+
+    h3 {
+        font-size: 44px;
+        margin-bottom: 56px;
+    }
+
+    .softSkills-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 56px;
+
+        .softSkills {
+            border: 2px solid var(--light);
+            border-radius: 20px;
+            width: 200px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .text {
+        p {
+            text-align: justify;
+            margin-bottom: 32px;
+        }
+    }
+
+    .hardSkills-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: 56px 0 56px;
+        gap: 136px;
+
+        .hardSkills {
+            border: 3px solid var(--light);
+            border-radius: 20px;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #html {
+            border-color: #FF6D00;
+        }
+
+        #css {
+            border-color: #039BE5;
+        }
+
+        #figma {
+            border-color: #66BB6A;
+        }
+
+        #trello {
+            border-color: #1E88E5;
+        }
+
+        #javascript {
+            border-color: #FFD600;
+        }
+
+        #php {
+            border-color: #8B75A1;
+        }
+
+        #mysql {
+            border-color: #00796B;
+        }
+
+        #swift {
+            border-color: #FF6D00;
+        }
+
+        #swiftui {
+            border-color: #0D6CA1;
+        }
+    }
+}
+
+.myprojects {
+    padding: 40px 56px;
+
+    h3 {
+        font-size: 44px;
+        margin-bottom: 56px;
+    }
+}
+
+.menuBottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.line {
+    border: 1px solid var(--light);
+    width: calc(100% - 112px);
+    border-radius: 50px;
+    position: relative;
+    left: 56px;
+    margin: 16px 0 16px;
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: ;
+}
