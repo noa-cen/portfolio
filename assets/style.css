@@ -52,10 +52,11 @@ header {
 }
 
 .home {
-    background-image: url("portfolio.png");
+    background-image: url("portfolio2.png");
     background-size: cover;
-    height: calc(100% - 36px);
-    width: calc(100% - 24px);
+    background-position: 21% 50%;
+    height: 94%;
+    width: 98%;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -71,11 +72,11 @@ header {
     .navbar ul {
         position: relative;
         margin: 8px;
-        padding: 8px 48px;
+        padding: 8px 12px;
         border-radius: 40px;
         display: flex;
         align-items: center;
-        gap: 136px;
+        gap: 16px;
     }
 
     .dark {
@@ -115,7 +116,7 @@ header {
     .navbar li a.menuItem {
         position: relative;
         z-index: 2;
-        padding: 12px 48px;
+        padding: 8px 12px;
         border-radius: 40px;
     }
 
@@ -126,55 +127,54 @@ header {
 
     .intro {
         position: relative;
-        top: 30%;
-        left: 20%;
+        top: 8%;
+        left: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 16px;        
 
         h1 {
-            font-size: 72px;
+            font-size: 40px;
         }
 
         h2 {
-            font-size: 44px;
+            font-size: 24px;
         }
     }
 
     .contact {
         display: flex;
         align-items: center;
-        gap: 136px;
+        gap: 32px;
         position: relative;
-        left: 20%;
+        left: 0;
     }
 }
 
 /* About me */
 main {
-    margin: 40px 32px;
+    margin: 40px 24px;
 }
 
 .aboutme {
-    padding: 40px 56px;
-
     h3 {
-        font-size: 44px;
-        margin-bottom: 56px;
+        font-size: 40px;
+        margin-bottom: 40px;
     }
 
     .softSkills-container {
         display: flex;
+        flex-flow: row wrap;
         justify-content: space-around;
         align-items: center;
-        margin-bottom: 56px;
+        gap: 16px;
+        margin-bottom: 40px;
 
         .softSkills {
             border: 2px solid var(--light);
             border-radius: 20px;
-            width: 200px;
+            width: 150px;
             height: 40px;
             display: flex;
             justify-content: center;
@@ -186,7 +186,7 @@ main {
     .text {
         p {
             text-align: justify;
-            margin-bottom: 32px;
+            margin-bottom: 16px;
         }
     }
 
@@ -195,14 +195,14 @@ main {
         flex-flow: row wrap;
         justify-content: space-around;
         align-items: center;
-        margin: 56px 0 56px;
-        gap: 136px;
+        margin: 40px 0 40px;
+        gap: 12px;
 
         .hardSkills {
             border: 3px solid var(--light);
             border-radius: 20px;
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -261,11 +261,9 @@ main {
 
 /* My projects */
 .myprojects {
-    padding: 40px 56px;
-
     h3 {
-        font-size: 44px;
-        margin-bottom: 56px;
+        font-size: 40px;
+        margin-bottom: 40px;
     }
 }
 
@@ -274,16 +272,16 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 16px 88px;
+    margin: 24px 32px;
 
     .name {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .cv {
         border: 2px solid var(--orange);
         border-radius: 20px;
-        width: 200px;
+        width: 100px;
         height: 40px;
         display: flex;
         justify-content: center;
@@ -295,11 +293,10 @@ main {
 
 .line {
     border: 1px solid var(--light);
-    width: calc(100% - 112px);
+    width: calc(100% - 48px);
     border-radius: 50px;
     position: relative;
-    left: 56px;
-    margin: 16px 0 16px;
+    left: 24px;
 }
 
 .copyright {
@@ -308,3 +305,10 @@ main {
     margin: 16px 0;
 }
 
+/* Media queries */
+@media (min-width: 425px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1024px) {
+}
