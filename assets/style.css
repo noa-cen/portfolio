@@ -1,5 +1,4 @@
 /* General */
-
 * {
     padding: 0px;
     margin: 0px;
@@ -25,6 +24,10 @@
     --background: #ffffff15;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--dark);
     color: var(--light);
@@ -40,7 +43,6 @@ a {
 }
 
 /* Home */
-
 header {
     height: 100svh;
     max-width: 100svw;
@@ -61,30 +63,76 @@ header {
     align-items: center;
     color: var(--dark);
 
+    .navbar {
+        position: fixed;
+        z-index: 2;
+    }
+
     .navbar ul {
-        background-color: var(--dark);
+        position: relative;
         margin: 8px;
-        padding: 4px 48px;
+        padding: 8px 48px;
         border-radius: 40px;
         display: flex;
         align-items: center;
         gap: 136px;
     }
 
-    .active {
-        background-color: var(--grey);
+    .dark {
+        background-color: var(--dark);
+
+        .indicator {
+            background-color: var(--grey);
+        }
+
+        li a {
+            color: var(--light);
+        }
+    }
+
+    .light {
+        background-color: var(--light);
+
+        .indicator {
+            background-color: var(--grey);
+        }
+        
+        li a {
+            color: var(--dark);
+        }
+    }
+
+    .indicator {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        height: 80%;
+        border-radius: 40px;
+        transition: transform 0.3s ease, width 0.3s ease;
+        z-index: 1;
+    }
+
+    .navbar li a.menuItem {
+        position: relative;
+        z-index: 2;
         padding: 12px 48px;
         border-radius: 40px;
     }
 
+    .navbar li.active a.menuItem {
+        font-weight: bold;
+        color: var(--light);
+    }
+
     .intro {
+        position: relative;
+        top: 30%;
+        left: 20%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 16px;
-        position: relative;
-        left: 20%;
+        gap: 16px;        
 
         h1 {
             font-size: 72px;
@@ -105,15 +153,11 @@ header {
 }
 
 /* About me */
-
 main {
-    margin: 40px 20px;
+    margin: 40px 32px;
 }
 
 .aboutme {
-    /* border: 3px solid var(--light);
-    border-radius: 20px;
-    background-color: var(--background); */
     padding: 40px 56px;
 
     h3 {
@@ -135,6 +179,7 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
+            box-shadow: rgba(217, 217, 217, 0.3) 0px 5px 15px;
         }
     }
 
@@ -165,42 +210,56 @@ main {
 
         #html {
             border-color: #FF6D00;
+            box-shadow: rgba(255, 109, 0, 0.3) 0px 5px 15px;
         }
 
         #css {
             border-color: #039BE5;
+            box-shadow: rgba(3, 155, 229, 0.3) 0px 5px 15px;
+        }
+
+        #github {
+            box-shadow: rgba(217, 217, 217, 0.3) 0px 5px 15px;
         }
 
         #figma {
             border-color: #66BB6A;
+            box-shadow: rgba(102, 187, 106, 0.3) 0px 5px 15px;
         }
 
         #trello {
             border-color: #1E88E5;
+            box-shadow: rgba(30, 136, 229, 0.3) 0px 5px 15px;
         }
 
         #javascript {
             border-color: #FFD600;
+            box-shadow: rgba(255, 214, 0, 0.3) 0px 5px 15px;
         }
 
         #php {
             border-color: #8B75A1;
+            box-shadow: rgba(139, 117, 161, 0.3) 0px 5px 15px;
         }
 
         #mysql {
             border-color: #00796B;
+            box-shadow: rgba(0, 121, 107, 0.3) 0px 5px 15px;
         }
 
         #swift {
             border-color: #FF6D00;
+            box-shadow: rgba(255, 109, 0, 0.3) 0px 5px 15px;
         }
 
         #swiftui {
             border-color: #0D6CA1;
+            box-shadow: rgba(13, 108, 161, 0.3) 0px 5px 15px;
         }
     }
 }
 
+/* My projects */
 .myprojects {
     padding: 40px 56px;
 
@@ -210,10 +269,28 @@ main {
     }
 }
 
+/* Footer */
 .menuBottom {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin: 16px 88px;
+
+    .name {
+        font-size: 28px;
+    }
+
+    .cv {
+        border: 2px solid var(--orange);
+        border-radius: 20px;
+        width: 200px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--orange);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+    }
 }
 
 .line {
@@ -227,5 +304,7 @@ main {
 
 .copyright {
     text-align: center;
-    margin-bottom: ;
+    font-size: 14px;
+    margin: 16px 0;
 }
+
