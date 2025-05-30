@@ -69,4 +69,56 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* My projects */
-const myProjectsContainer = document.querySelector('.myprojects');
+async function getProject() {
+    try {
+        const reponse = await fetch('assets/projects/projects.json');
+        const projects = await reponse.json();
+        return projects;
+    }
+    catch (error) {
+        console.error('Error fetching or processing projects:', error);
+    }
+}
+
+getProject().then(projects => {
+    for (let i = 0; i < projects.length; i++) {
+        const projectsContainer = document.querySelector('.myprojects');
+        const myProject = document.createElement('article');
+        myProject.classList.add('project');
+
+        const project = projects[i];
+
+        const titleElement = document.createElement('h4');
+        titleElement.textContent = project.name;
+
+        const imageElement = document.createElement('img');
+        imageElement.classList.add('projectImage');
+        imageElement.alt = `Image de l'écran d'accueil de ${project.name}`;
+        imageElement.title = project.name;
+        imageElement.src = project.image;
+
+        const descriptionElement = document.createElement('p');
+        descriptionElement.textContent = project.description;
+
+        const technologiesList = document.createElement('ul');
+        project.technologies.forEach(tech => {
+            const technologieElement = document.createElement('li');
+            technologieElement.textContent = project.technologies;
+            technologiesList.appendChild(technologieElement);
+        });
+
+        const linkElement = document.createElement('a');
+        linkElement.classList.add('link');
+        linkElement.href = project.link;
+        linkElement.target = '_blank';
+        linkElement.ariaLabel = `Accéder à la page ${project.name}`;
+        linkElement.textContent = 'Voir la page';
+
+        myProject.appendChild(titleElement);
+        myProject.appendChild(imageElement);
+        myProject.appendChild(descriptionElement);
+        myProject.appendChild(technologiesList);
+        myProject.appendChild(linkElement);
+        projectsContainer.appendChild(myProject);
+    }
+});
