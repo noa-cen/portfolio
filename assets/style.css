@@ -383,9 +383,51 @@ main {
 }
 
 /* Media queries */
-@media (min-width: 425px) {
-}
 @media (min-width: 768px) {
+    main {
+        margin: 40px;
+    }
+
+    .home {
+        .intro {
+            top: 35%;
+            left: 20%;
+
+            h1 {
+                font-size: 56px;
+            }
+
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        .contact {
+            left: 24%;
+        }
+    }
+
+    .myprojects {
+        .project {
+            .projectImage {
+                margin-bottom: 40px;
+            }
+
+            ul {
+                margin-bottom: 40px;
+            }
+        }
+    }
 }
+
 @media (min-width: 1024px) {
+    main {
+        margin: 56px;
+    }
+}
+
+@media (min-width: 1440px) {
+    main {
+        margin: 88px;
+    }
 }
