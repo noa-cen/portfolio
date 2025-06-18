@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const indicator = document.querySelector('.navbar .indicator');
     const navbar = document.querySelector('.navbar ul');
     const aboutMe = document.querySelector('#aboutme');
+    const myprojects = document.querySelector('#myprojects');
 
     function moveIndicator(activeMenuItem) {
         const rect = activeMenuItem.getBoundingClientRect();
@@ -49,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Color change synchronized with the #aboutme section
-        if (aboutMe) {
-            if (isInView(aboutMe)) {
+        if (aboutMe && myprojects) {
+            if (isInView(aboutMe) || isInView(myprojects)) {
                 navbar.classList.remove('dark');
                 navbar.classList.add('light');
             } else {
@@ -91,21 +92,25 @@ getProject().then(projects => {
         const titleElement = document.createElement('h4');
         titleElement.textContent = project.name;
 
+        const cardImage = document.createElement('article');
+        cardImage.classList.add('card');
         const imageElement = document.createElement('img');
         imageElement.classList.add('projectImage');
         imageElement.alt = `Image de l'écran d'accueil de ${project.name}`;
         imageElement.title = project.name;
         imageElement.src = project.image;
-
-        const descriptionElement = document.createElement('p');
-        descriptionElement.textContent = project.description;
+        cardImage.appendChild(imageElement);
 
         const technologiesList = document.createElement('ul');
         project.technologies.forEach(tech => {
             const technologieElement = document.createElement('li');
-            technologieElement.textContent = project.technologies;
+            technologieElement.classList.add('techElement')
+            technologieElement.textContent = tech;
             technologiesList.appendChild(technologieElement);
         });
+
+        const descriptionElement = document.createElement('p');
+        descriptionElement.textContent = project.description;
 
         const linkElement = document.createElement('a');
         linkElement.classList.add('link');
@@ -115,9 +120,9 @@ getProject().then(projects => {
         linkElement.textContent = 'Voir la page';
 
         myProject.appendChild(titleElement);
-        myProject.appendChild(imageElement);
-        myProject.appendChild(descriptionElement);
+        myProject.appendChild(cardImage);
         myProject.appendChild(technologiesList);
+        myProject.appendChild(descriptionElement);
         myProject.appendChild(linkElement);
         projectsContainer.appendChild(myProject);
     }
