@@ -60,7 +60,7 @@
         "name": "10xNorth – Refonte de site web",
         "image": "assets/projects/10xNorth.png",
         "description": "Pour ce projet, j’ai réalisé la refonte complète du site web de 10xNorth sur la plateforme Squarespace, à la demande du client. L’objectif était de moderniser et d’optimiser l’interface pour améliorer l'expérience utilisateur tout en respectant l’identité visuelle de l’entreprise. J’ai retravaillé la structure du site, les éléments visuels et la navigation afin de rendre le site plus attrayant, fonctionnel et accessible, tout en assurant une mise en page responsive adaptée à tous les appareils.",
-        "technologies": "Squarespace",
+        "technologies": ["Squarespace"],
         "link": "https://www.10xnorth.com/"
     },
     {

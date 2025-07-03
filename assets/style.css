@@ -288,6 +288,7 @@ main {
             top: -12px;
             left: -12px;
             width: 100%;
+            max-width: 1000px;
             height: 90%;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
@@ -297,7 +298,10 @@ main {
             position: relative;
             z-index: 1;
             display: block;
-            max-width: 100%;
+            object-fit: cover;
+            width: 100%;
+            max-width: 1000px;
+            height: 200px;
             border-radius: 10px;
             margin-bottom: 20px;
         }
@@ -411,6 +415,7 @@ main {
         .project {
             .projectImage {
                 margin-bottom: 40px;
+                height: 300px;
             }
 
             ul {
@@ -423,6 +428,14 @@ main {
 @media (min-width: 1024px) {
     main {
         margin: 56px;
+    }
+
+    .myprojects {
+        .project {
+            .projectImage {
+                height: 500px;
+            }
+        }
     }
 }
 
