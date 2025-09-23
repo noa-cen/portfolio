@@ -85,7 +85,7 @@ h3 {
         justify-content: space-between;
         position: relative;
         top: 180px;
-        gap: 120px;
+        gap: 104px;
         margin: 0 32px;
 
         h1 {
@@ -170,7 +170,7 @@ h3 {
 
     .hardSkills-container {
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
         justify-content: space-around;
         align-items: center;
         margin: 64px 0;
@@ -344,4 +344,289 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 20px;
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
+    .home {
+        .navbar {
+            width: 45%;
+        }
+
+        .titre {
+            h1 {
+                font-size: 88px;
+            }
+
+            .cadre-photo {
+                .peinture {
+                    left: -250px;
+                    width: 500px;
+                }
+
+                .rectangle {
+                    width: 250px;
+                }
+
+                .profil {
+                    top: -89px;
+                    width: 250px;
+                }
+            }
+        }
+
+        .intro {
+            h2 {
+                font-size: 32px;
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        margin: 24px 40px;
+    }
+
+    .home {
+        .noah {
+            width: 60px;
+        }
+
+        .navbar {
+            width: 50%;
+        }
+
+        .navbar ul {
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .titre {
+            gap: 104px;
+            margin: 0 0;
+
+            h1 {
+                font-size: 64px;
+            }
+
+            .cadre-photo {
+                .peinture {
+                    left: -170px;
+                    width: 400px;
+                }
+
+                .rectangle {
+                    width: 200px;
+                }
+
+                .profil {
+                    top: -70px;
+                    width: 200px;
+                }
+            }
+        }
+
+        .intro {
+            left: 0;
+
+            h2 {
+                font-size: 32px;
+            }
+        }
+
+        .contact {
+            gap: 32px;
+
+            .logo {
+                width: 65px;
+                height: 65px;
+            }
+        }
+    }
+
+    .aboutme {
+        .softSkills-container {
+            flex-flow: row wrap;
+        }
+
+        .cv {
+            .rectangle2 {
+                width: 200px;
+                height: 70px;
+            }
+
+            a {
+                width: 199px;
+                height: 69px;
+                font-size: 24px;
+            }
+        }
+    }
+
+    .myprojects {
+        .projects {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    .modal {
+        .modal-container {
+            width: 400px;
+            max-height: 450px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    h3 {
+        font-size: 24px;
+        margin: 72px 0 32px 40px;
+    }
+
+    .home {
+        .navbar {
+            width: 74%;
+        }
+
+        .navbar ul {
+            gap: 24px;
+        }
+
+        .titre {
+            flex-direction: column;
+            top: 80px;
+
+            .cadre-photo {
+                top: 0;
+
+                .peinture {
+                    position: absolute;
+                    left: -50px;
+                    width: 400px;
+                }
+
+                .rectangle {
+                    left: 120px;
+                    width: 200px;
+                }
+
+                .profil {
+                    left: 120px;
+                    top: -70px;
+                    width: 200px;
+                }
+            }
+        }
+
+        .intro {
+            top: -24px;
+
+            h2 {
+                font-family: "Anton";
+                font-size: 24px;
+                margin-bottom: 280px;
+            }
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            position: relative;
+            left: 32px;
+            margin-top: 24px;
+
+            .logo {
+                width: 65px;
+                height: 65px;
+            }
+        }
+    }
+
+    .aboutme {
+        .hardSkills-container {
+            margin: 48px 0;
+        }
+
+        .softSkills-container {
+            font-size: 18px;
+            gap: 24px;
+        }
+
+        .cv {
+            margin: 72px 0 88px;
+
+            .rectangle2 {
+                width: 200px;
+                height: 70px;
+            }
+
+            a {
+                width: 199px;
+                height: 69px;
+                font-size: 24px;
+            }
+        }
+    }
+
+    .myprojects {
+        .projects {
+            margin: 32px 0;
+        }
+    }
+
+    .modal {
+        .modal-container {
+            width: 300px;
+        }
+
+        .modal-content {
+            width: 250px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .home {
+        .navbar {
+            width: 80%;
+        }
+
+        .titre {
+            h1 {
+                font-size: 53px;
+            }
+
+            .cadre-photo {
+                .peinture {
+                    left: -80px;
+                }
+
+                .rectangle {
+                    left: 90px;
+                }
+
+                .profil {
+                    left: 90px;
+                    top: -70px;
+                }
+            }
+        }
+
+        .contact {
+            left: 8px;
+        }
+    }
+
+    .myprojects {
+        .project {
+            .projectImage {
+                width: 300px;
+            }
+        }
+    }
 }
