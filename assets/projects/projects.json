@@ -1,63 +1,64 @@
 [
     {
         "id": 1,
-        "name": "Fansite – Projet web collaboratif",
+        "name": "La Scaloneta",
+        "intro": "Projet web collaboratif - site vitrine",
         "image": "assets/projects/Scaloneta.jpg",
         "description": "Dans le cadre de ce projet scolaire, nous avons réalisé un site web dédié à nos célébrités ou passions personnelles. Chaque membre de l’équipe a conçu une section complète autour d’une célébrité (ou groupe/marque/etc.), avec plusieurs pages thématiques (actualité, réalisations, événements, galerie multimédia, liens utiles, formulaire de contact…). Le site est structuré avec une page d’accueil commune et utilise un design cohérent grâce à des fichiers CSS séparés mais harmonisés. Une navigation fluide via un header et un footer permet de parcourir l’ensemble du contenu. Ce projet a mis l’accent sur l’utilisation des balises sémantiques HTML et une bonne organisation du code.",
         "technologies": [
             "HTML",
-            "CSS",
-            "Figma",
-            "Git/Github",
-            "Trello"
+            " CSS",
+            " Figma",
+            " Trello"
         ],
         "link": "https://github.com/noa-cen/Fansite_limonade"
     },
     {
         "id": 2,
-        "name": "Matcha Tea – Site e-commerce (Front-end)",
+        "name": "MatchaTea",
+        "intro": "Site e-commerce (Front-end)",
         "image": "assets/projects/MatchaTea.jpg",
         "description": "Ce projet individuel consistait à concevoir la partie front-end d’un site web de vente de thé matcha. J'ai créé plusieurs pages HTML responsives en respectant une maquette existante, tout en personnalisant les couleurs et les polices. Le site comprend une page d’accueil mettant en avant les produits phares, des pages de présentation de l’entreprise et de son histoire, une page de contact avec formulaire, un espace client (profil et commandes), ainsi qu’un espace administrateur (gestion des utilisateurs, commandes et produits).",
         "technologies": [
             "HTML",
-            "CSS",
-            "Figma",
-            "Git/Github"
+            " CSS",
+            " Figma"
         ],
         "link": "https://github.com/noa-cen/matcha_tea"
     },
     {
         "id": 3,
-        "name": "Portfolio – Sophie Victoria",
+        "name": "Sophie Victoria",
+        "intro": "Portfolio d'une photographe",
         "image": "assets/projects/Sophie.jpg",
         "description": "Ce projet consistait à concevoir un portfolio professionnel pour Sophie Victoria, photographe, vidéographe et créatrice de contenu. Le site met en valeur ses réalisations à travers une interface élégante et responsive, avec des galeries d’images, des extraits vidéo et une présentation de son parcours. L’objectif était de créer une vitrine moderne, claire et fonctionnelle pour promouvoir son travail artistique et faciliter la prise de contact avec de futurs clients.",
         "technologies": [
             "HTML",
-            "CSS",
-            "Javascript",
-            "Figma",
-            "Git/Github"
+            " CSS",
+            " Javascript",
+            " Figma"
         ],
         "link": "https://github.com/noa-cen/SophieVictoria"
     },
     {
         "id": 4,
-        "name": "Quiz Night – Site web de création et participation à des quiz",
+        "name": "QuizNight",
+        "intro": "Application web de création de quiz",
         "image": "assets/projects/QuizNight.jpg",
         "description": "Ce projet personnel a été développé en architecture MVC. Il s’agit d’un site web permettant d’organiser des soirées quiz de manière simple et personnalisée. J’ai conçu un espace administrateur complet permettant de créer un nombre illimité de quiz, avec des questions à choix multiples entièrement personnalisables. Côté utilisateur, le site permet de consulter les quiz disponibles et d’y participer facilement. Ce projet met en avant mes compétences en structuration d’un projet web, en logique back-end et en gestion d’interfaces dynamiques.",
         "technologies": [
             "HTML",
-            "CSS",
-            "PHP",
-            "MySQL",
-            "Figma",
-            "Git/Github"
+            " CSS",
+            " PHP",
+            " MySQL",
+            " Figma"
         ],
         "link": "https://github.com/noa-cen/quiz_night"
     },
     {
         "id": 5,
-        "name": "10xNorth – Refonte de site web",
+        "name": "10xNorth",
+        "intro": "Site d'une agence de voyage",
         "image": "assets/projects/10xNorth.png",
         "description": "Pour ce projet, j’ai réalisé la refonte complète du site web de 10xNorth sur la plateforme Squarespace, à la demande du client. L’objectif était de moderniser et d’optimiser l’interface pour améliorer l'expérience utilisateur tout en respectant l’identité visuelle de l’entreprise. J’ai retravaillé la structure du site, les éléments visuels et la navigation afin de rendre le site plus attrayant, fonctionnel et accessible, tout en assurant une mise en page responsive adaptée à tous les appareils.",
         "technologies": ["Squarespace"],
@@ -65,13 +66,13 @@
     },
     {
         "id": 6,
-        "name": "Clicker-Pokémon – Jeu de type clicker Pokémon",
-        "image": "assets/projects/Pokémon.jpg",
-        "description": "Clicker-Pokémon est un jeu incrémental où le joueur capture des Pokémon au fur et à mesure qu’il clique pour gagner des ressources. Le projet inclut une gestion de progression basée sur la capture de Pokémon, avec un système dynamique de probabilités pour l’apparition des Pokémon selon le niveau du joueur. Le jeu intègre une boutique pour acheter des objets, des évolutions basées sur des pierres, et une interface fluide pour la gestion des captures. J'ai également mis en place une sauvegarde locale et un design responsive pour une expérience optimale sur tous les appareils.",
+        "name": "Clickemon",
+        "intro": "Jeu de type clicker Pokémon",
+        "image": "assets/projects/Clickemon.png",
+        "description": "Clickemon est un jeu incrémental où le joueur capture des Pokémon au fur et à mesure qu’il clique pour gagner des ressources. Le projet inclut une gestion de progression basée sur la capture de Pokémon, avec un système dynamique de probabilités pour l’apparition des Pokémon selon le niveau du joueur. Le jeu intègre une boutique pour acheter des objets, des évolutions basées sur des pierres, et une interface fluide pour la gestion des captures. J'ai également mis en place une sauvegarde locale et un design responsive pour une expérience optimale sur tous les appareils.",
         "technologies": [
             "Javascript",
-            "CSS",
-            "Git/Github"
+            " CSS"
         ],
         "link": "https://github.com/noa-cen/clicker-pokemon"
     }

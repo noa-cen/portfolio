@@ -2,62 +2,71 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Portfolio de Noa Cengarle">
-        <meta name="author" content="Noa Cengarle">
+        <meta name="description" content="Portfolio de Noah Cengarle">
+        <meta name="author" content="Noah Cengarle">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/style.css">
         <script src="script.js" defer></script>
         
-        <link rel="icon" type="image/x-icon" href="assets/favicon/favicon-dark.ico">
-        <title>Noa Cengarle - portfolio</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+        <title>Noah Cengarle - portfolio</title>
     </head>
     
     <body>
         <header>
             <section class="home" id="home">
                 <nav class="navbar">
-                    <ul class="dark">
-                        <div class="indicator"></div>
-                        <li class="active"><a href="#home" class="menuItem" 
-                            aria-label="Accéder à l'accueil">Home</a></li>
+                    <ul>
+                        <li><a href="#home" class="menuItem" 
+                            aria-label="Accéder à l'accueil"><img src="assets/Icons/logo.png" alt="logo" 
+                        title="Noah"></a></li>
                         <li><a href="#aboutme" class="menuItem" 
-                            aria-label="Accéder à propos de moi">About me</a></li>
+                            aria-label="Accéder à propos de moi">A propos de moi</a></li>
                         <li><a href="#myprojects" class="menuItem" 
-                            aria-label="Accéder à mes projets">My projects</a></li>
+                            aria-label="Accéder à mes projets">Mes projets</a></li>
                     </ul>
                 </nav>
-                <article class="intro">
-                    <h1>Noa Cengarle</h1>
-                    <h2>Fullstack developer</h2>
+
+                <article class="titre">
+                    <h1>Noah Cengarle</h1>
+                    <div class="cadre-photo">
+                        <img src="assets/splash.png" alt="peinture" title="peinture" class="peinture">
+                        <img src="assets/rectangle.png" alt="rectangle" title="rectangle" class="rectangle">
+                        <img src="assets/profil-noBg.png" alt="photo de profil" title="photo de profil" 
+                        class="profil">
+                    </div>
+        
                 </article>
-                <article class="contact">
-                    <a href="https://www.linkedin.com/in/noa-cengarle/" aria-label="Accéder à Linkedin"
-                        target="_blank" rel="noopener noreferrer"><img 
-                            src="assets/Icons/linkedin-contact.png" alt="logo Linkedin" 
-                            title="Linkedin" class="logo"></a>
-                    <a href="https://github.com/noa-cen" aria-label="Accéder à Github"
-                        target="_blank" rel="noopener noreferrer"><img 
-                            src="assets/Icons/github-contact.png" alt="logo GitHub" 
-                            title="Github" class="logo"></a>
-                    <a href="mailto:noacengarle@gmail.com" aria-label="Envoyer un email"
-                        target="_blank" rel="noopener noreferrer"><img 
-                            src="assets/Icons/gmail-contact.png" alt="logo Gmail" 
-                            title="Gmail" class="logo"></a>
+
+                <article class="intro">
+                    <h2>&lt; Développeur full stack /&gt;</h2>
+
+                    <article class="contact">
+                        <a href="https://www.linkedin.com/in/noa-cengarle/" aria-label="Accéder à Linkedin"
+                            target="_blank" rel="noopener noreferrer"><img 
+                                src="assets/Icons/linkedin-contact.png" alt="logo Linkedin" 
+                                title="Linkedin" class="logo"></a>
+                        <a href="https://github.com/noa-cen" aria-label="Accéder à Github"
+                            target="_blank" rel="noopener noreferrer"><img 
+                                src="assets/Icons/github-contact.png" alt="logo GitHub" 
+                                title="Github" class="logo"></a>
+                        <a href="mailto:noacengarle@gmail.com" aria-label="Envoyer un email"
+                            target="_blank" rel="noopener noreferrer"><img 
+                                src="assets/Icons/gmail-contact.png" alt="logo Gmail" 
+                                title="Gmail" class="logo"></a>
+                    </article>
                 </article>
             </section>
         </header>
 
         <main>
             <section class="aboutme" id="aboutme">
-                <h3>About me</h3>
-                <article class="softSkills-container">
-                    <p class="softSkills">Adaptabilité</p>
-                    <p class="softSkills">Esprit d'équipe</p>
-                    <p class="softSkills">Curiosité</p>
-                    <p class="softSkills">Autonomie</p>
-                    <p class="softSkills">Créativité</p>
-                </article>
+                <h3>&lt; A propos de moi /&gt;</h3>
+                
                 <article class="text">
                     <p>Après dix ans dans le service client et la gestion d’équipe, j’ai 
                         choisi de me réorienter vers un domaine qui m’a toujours attiré : 
@@ -74,9 +83,10 @@
                         Argentine. Ces expériences ont enrichi ma vision du monde et renforcé 
                         mon aisance dans des contextes multiculturels et agiles.</p>
                     <p>Curieux, autonome et toujours prêt à apprendre, je suis ouvert aux 
-                        échanges, aux retours d’expérience et aux nouvelles opportunités. 
-                        N’hésitez pas à me contacter !</p>
+                        échanges, aux retours d’expérience et aux nouvelles opportunités.</p>
+                    <p>N’hésitez pas à me contacter !</p>
                 </article>
+
                 <article class="hardSkills-container">
                     <article class="hardSkills" id="html"><img src="assets/Icons/html.png" alt="logo HTML" 
                         title="HTML" class="logo"></article>
@@ -101,22 +111,44 @@
                     <article class="hardSkills" id="swiftui"><img src="assets/Icons/swiftui.png" alt="logo SwiftUI" 
                         title="SwiftUI" class="logo"></article>
                 </article>
+
+                <article class="softSkills-container">
+                    <p class="softSkills">Adaptabilité</p>
+                    <p class="softSkills">Esprit d'équipe</p>
+                    <p class="softSkills">Curiosité</p>
+                    <p class="softSkills">Autonomie</p>
+                    <p class="softSkills">Créativité</p>
+                </article>
+
+                <article class="cv">
+                    <img src="assets/rectangle2.png" alt="rectangle" title="rectangle" class="rectangle2">
+                    <a href="https://drive.google.com/file/d/1aLJHlhaXlJ-EM0XdRNQPNlVrjYcjd6GL/view?usp=sharing" 
+                        target="_blank" class="cv"
+                        aria-label="Accéder à mon CV">&lt; Voir mon CV /&gt;</a>
+                </article>
             </section>
 
             <section class="myprojects" id="myprojects">
-                <h3>My projects</h3>
+                <h3>&lt; Mes projets /&gt;</h3>
+                <article class="projects"></article>
+            </section>
+
+            <section class="modal" id="projectModal">
+                <div class="modal-container">
+                    <span class="close">&times;</span>
+                    <h4 id="modalTitle"></h4>
+                    <p id="modalIntro"></p>
+                    <a id="modalLink" target="_blank"
+                            aria-label="Accéder au site"><img class="modal-content" 
+                            id="modalImage" alt="Image du projet agrandie"></a>
+                    <p id="modalDescription"></p>
+                    <p id="modalTechnologies"></p>
+                </div>
             </section>
         </main>
 
         <footer>
-            <ul class="menuBottom">
-                <li class="name">Noa Cengarle</li>
-                <li><a href="https://drive.google.com/file/d/1aLJHlhaXlJ-EM0XdRNQPNlVrjYcjd6GL/view?usp=sharing" 
-                        target="_blank" class="cv"
-                        aria-label="Accéder à mon CV">My CV</a></li>
-            </ul>
-            <article class="line"></article>
-            <p class="copyright">All rights reserved</p>
+            <p class="footer">&lt; © Noah Cengarle - 2025 /&gt;</p>
         </footer>
     </body>
 </html>
